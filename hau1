@@ -1,1 +1,345 @@
+-- Load Fluent UI
+local Fluent = loadstring(Game:HttpGet("https://raw.githubusercontent.com/HuynkKhoa1/SolarHub_UI/refs/heads/main/Custom_Solar.lua", true))()
+local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 
+local Window = Fluent:CreateWindow({
+    Title = "Bubble Gum Simulator INF ",
+    SubTitle = "https://discord.gg/XPaVDsyxux",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 460),
+    Acrylic = true,
+    Theme = "Solar",
+    MinimizeKey = Enum.KeyCode.LeftControl
+})
+
+local Tabs = {
+    Main = Window:AddTab({ Title = "Main", Icon = "target" }),
+    Travel = Window:AddTab({ Title = "Travel", Icon = "plane" }),
+    Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
+    
+}
+
+local Options = Fluent.Options
+
+-- ===== HỆ THỐNG TỰ ĐỘNG BONG BÓNG =====
+local bubbleSystem = {
+    Enabled = false,
+    Running = false,
+    BlowCount = 0,
+    SellCount = 0,
+    Delay = 0.1,
+    Remote = game:GetService("ReplicatedStorage"):WaitForChild("Shared")
+             :WaitForChild("Framework"):WaitForChild("Network")
+             :WaitForChild("Remote"):WaitForChild("Event")
+}
+
+function bubbleSystem:Blow()
+    self.Remote:FireServer("BlowBubble")
+    self.BlowCount = self.BlowCount + 1
+end
+
+function bubbleSystem:Sell()
+    self.Remote:FireServer("SellBubble")
+    self.SellCount = self.SellCount + 1
+end
+
+function bubbleSystem:Start()
+    if self.Running then return end
+    self.Running = true
+    
+    task.spawn(function()
+        while self.Enabled do
+            self:Blow()
+            self:Sell()
+            
+            -- Thông báo mỗi 100 lần
+            if self.BlowCount % 100 == 0 then
+                print("Đã thổi: "..self.BlowCount.." | Đã bán: "..self.SellCount)
+            end
+            
+            task.wait(self.Delay)
+        end
+        self.Running = false
+    end)
+end
+
+-- ===== TÍCH HỢP VÀO TAB MAIN =====
+local bubbleSection = Tabs.Main:AddSection("Tự Động Bong Bóng")
+
+-- Toggle bật/tắt
+Tabs.Main:AddToggle("AutoBubbleToggle", {
+    Title = "Tự động thổi & bán bong bóng",
+    Default = false,
+    Callback = function(state)
+        bubbleSystem.Enabled = state
+        if state then
+            bubbleSystem:Start()
+            print("Đã bật tự động bong bóng")
+        else
+            print("Đã tắt tự động bong bóng")
+        end
+    end
+})
+
+
+
+-- Biến toàn cục cho việc thu thập
+local collecting = false
+local COLLECTION_RANGE = 50 -- Giá trị mặc định
+
+
+
+Tabs.Main:AddToggle("AutoCoinToggle", {
+    Title = "Tự động thu thập đồng xu",
+    Default = false,
+}):OnChanged(function(state)
+    collecting = state
+    if collecting then
+        -- Bắt đầu thu thập
+        task.spawn(function()
+            while collecting and task.wait() do
+                collectCoins()
+            end
+        end)
+    end
+end)
+
+Tabs.Main:AddSlider("CoinRangeSlider", {
+    Title = "Phạm vi thu thập (studs)",
+    Default = 50,
+    Min = 50,
+    Max = 1000,
+    Rounding = 0,
+    Callback = function(value)
+        COLLECTION_RANGE = value
+    end
+})
+
+-- Hàm thu thập đồng xu
+function collectCoins()
+    local Player = game:GetService("Players").LocalPlayer
+    local Character = Player.Character or Player.CharacterAdded:Wait()
+    local HumanoidRootPart = Character:WaitForChild("HumanoidRootPart")
+    
+    -- Kiểm tra nhân vật
+    if not Character or not Character:FindFirstChild("HumanoidRootPart") then return end
+    
+    -- Bảo đảm container đồng xu
+    local container = workspace.Rendered:GetChildren()[12]
+    if not container then return end
+    
+    -- Vị trí người chơi
+    local playerPosition = HumanoidRootPart.Position
+    
+    -- Duyệt qua tất cả các đồng xu
+    for _, coin in pairs(container:GetChildren()) do
+        local coinID = coin.Name
+        
+        -- Tính khoảng cách
+        local coinPosition
+        pcall(function()
+            if coin:IsA("Model") then
+                coinPosition = coin:GetPivot().Position
+            elseif coin:IsA("BasePart") then
+                coinPosition = coin.Position
+            end
+        end)
+        
+        if not coinPosition then continue end
+        
+        local distance = (playerPosition - coinPosition).Magnitude
+        
+        if string.match(coinID, "%x+%-%x+%-%x+%-%x+%-%x+") and distance <= COLLECTION_RANGE then
+            game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("Pickups"):WaitForChild("CollectPickup"):FireServer(coinID)
+            
+            pcall(function()
+                coin:PivotTo(CFrame.new(0, -1000, 0))
+                if coin:IsA("Model") then
+                    for _, part in pairs(coin:GetDescendants()) do
+                        if part:IsA("BasePart") then 
+                            part.Transparency = 1
+                            part.CanCollide = false 
+                        end
+                    end
+                elseif coin:IsA("BasePart") then
+                    coin.Transparency = 1
+                    coin.CanCollide = false
+                end
+            end)
+        end
+    end
+    
+    task.wait(0.1)
+end
+
+-- ===== HỆ THỐNG TỰ ĐỘNG NHẬN THƯỞNG =====
+local rewardSystem = {
+    Enabled = false,
+    Running = false,
+    Remote = game:GetService("ReplicatedStorage"):WaitForChild("Shared")
+               :WaitForChild("Framework"):WaitForChild("Network")
+               :WaitForChild("Remote"):WaitForChild("Function"),
+    ClaimDelay = 0.5,    -- Thời gian chờ giữa các lần nhận (giây)
+    CheckInterval = 300  -- Thời gian chờ giữa các chu kỳ (giây)
+}
+
+function rewardSystem:Start()
+    if self.Running then return end
+    self.Running = true
+    
+    task.spawn(function()
+        while self.Enabled do
+            print("Đang kiểm tra phần thưởng...")
+            
+            for i = 1, 9 do
+                if not self.Enabled then break end
+                
+                local args = {"ClaimPlaytime", i}
+                local success, result = pcall(function()
+                    return self.Remote:InvokeServer(unpack(args))
+                end)
+                
+                if success then
+                    print("Đã nhận phần thưởng #"..i..": "..tostring(result))
+                else
+                    print("Lỗi phần thưởng #"..i)
+                end
+                
+                task.wait(self.ClaimDelay)
+            end
+            
+            if self.Enabled then
+                print("Chờ "..self.CheckInterval.."s để kiểm tra lại...")
+                task.wait(self.CheckInterval)
+            end
+        end
+        self.Running = false
+    end)
+end
+
+-- ===== TÍCH HỢP VÀO TAB MAIN =====
+local rewardSection = Tabs.Main:AddSection("Tự Động Nhận Thưởng")
+
+-- Nút bật/tắt chính
+Tabs.Main:AddToggle("AutoRewardToggle", {
+    Title = "Tự động nhận thưởng online",
+    Default = false,
+    Callback = function(state)
+        rewardSystem.Enabled = state
+        if state then
+            rewardSystem:Start()
+            Fluent:Notify({
+                Title = "Nhận Thưởng",
+                Content = "Đã bật tự động nhận thưởng",
+                Duration = 3
+            })
+        else
+            Fluent:Notify({
+                Title = "Nhận Thưởng",
+                Content = "Đã tắt tự động nhận thưởng", 
+                Duration = 3
+            })
+        end
+    end
+})
+
+-- Điều chỉnh thời gian chờ
+Tabs.Main:AddSlider("RewardDelay", {
+    Title = "Thời gian chờ (phút)",
+    Description = "Khoảng thời gian giữa các lần kiểm tra",
+    Default = 5,
+    Min = 1,
+    Max = 60,
+    Rounding = 0,
+    Callback = function(value)
+        rewardSystem.CheckInterval = value * 60  -- Chuyển phút -> giây
+    end
+})
+
+-- Hiển thị trạng thái
+
+-- Cập nhật UI trạng thái
+task.spawn(function()
+    while task.wait(1) do
+        rewardStatus:SetDesc("Tự động nhận thưởng: "..(rewardSystem.Enabled and "BẬT" or "TẮT"))
+    end
+end)
+
+
+local teleportPaths = {
+    ["Spawn Location"] = "Workspace.Worlds.The Overworld.PortalSpawn",
+    ["Floating Island"] = "Workspace.Worlds.The Overworld.Islands.Floating Island.Island.Portal.Spawn",
+    ["Outer Space"] = "Workspace.Worlds.The Overworld.Islands.Outer Space.Island.Portal.Spawn",
+    ["Twilight"] = "Workspace.Worlds.The Overworld.Islands.Twilight.Island.Portal.Spawn",
+    ["The Void"] = "Workspace.Worlds.The Overworld.Islands.The Void.Island.Portal.Spawn",
+    ["Zen"] = "Workspace.Worlds.The Overworld.Islands.Zen.Island.Portal.Spawn",
+}
+
+local selectedLocation = "Spawn Location"
+
+Tabs.Travel:AddDropdown("IslandSelect", {
+    Title = "Select Island",
+    Values = {
+        "Spawn Location",
+        "Floating Island",
+        "Outer Space",
+        "Twilight",
+        "The Void",
+        "Zen"
+    },
+    Default = 1,
+    Multi = false,
+}):OnChanged(function(value)
+    selectedLocation = value
+end)
+
+Tabs.Travel:AddButton({
+    Title = "Teleport",
+    Callback = function()
+        local remote = game:GetService("ReplicatedStorage")
+            :WaitForChild("Shared"):WaitForChild("Framework")
+            :WaitForChild("Network"):WaitForChild("Remote")
+            :WaitForChild("Event")
+
+        local target = teleportPaths[selectedLocation]
+        if target then
+            remote:FireServer("Teleport", target)
+            Fluent:Notify({
+                Title = "Teleported!",
+                Content = "You arrived at: " .. selectedLocation,
+                Duration = 3
+            })
+        else
+            Fluent:Notify({
+                Title = "Error",
+                Content = "Invalid teleport target.",
+                Duration = 3
+            })
+        end
+    end
+})
+
+-- Khởi động hệ thống
+bubbleSystem:Start()
+-- Addons: Save + UI
+SaveManager:SetLibrary(Fluent)
+InterfaceManager:SetLibrary(Fluent)
+
+SaveManager:IgnoreThemeSettings()
+SaveManager:SetIgnoreIndexes({})
+InterfaceManager:SetFolder("DungeonTool")
+SaveManager:SetFolder("DungeonTool/Saved")
+
+InterfaceManager:BuildInterfaceSection(Tabs.Settings)
+SaveManager:BuildConfigSection(Tabs.Settings)
+
+Window:SelectTab(1)
+
+Fluent:Notify({
+    Title = "Hunters Script",
+    Content = "Loaded successfully!",
+    Duration = 5
+})
+
+SaveManager:LoadAutoloadConfig()

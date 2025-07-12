@@ -94,7 +94,7 @@ getgenv().Config = {
         ["Auto Trade Eggs"] = true,
         ["Pet Dont Trade"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly",
                                "Mimic Octopus", "Brontosaurus", "Pterodactyl", "Fennec Fox", "Axolotl", "Hyacinth Macaw",
-                               "Scarlet Macaw", "Golden Lab", "T-Rex"}
+                               "Hamster", "Golden Lab", "T-Rex"}
     },
     ["Note"] = "Cyndral Hub",
     ["Pet Mode"] = {
@@ -109,11 +109,11 @@ getgenv().Config = {
             ["Enable"] = true,
             ["Black List Pet For Upgrade Slots"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee",
                                                     "Butterfly", "Mimic Octopus", "Pterodactyl", "Brontosaurus", "Fennec Fox",
-                                                    "Axolotl", "Hyacinth Macaw", "Scarlet Macaw", "T-Rex"}
+                                                    "Axolotl", "Hyacinth Macaw", "Hamster", "T-Rex"}
         },
         ["Pet Dont Delete"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly",
                                "Mimic Octopus", "Brontosaurus", "Pterodactyl", "Fennec Fox", "Axolotl", "Hyacinth Macaw",
-                               "Scarlet Macaw", "Golden Lab", "T-Rex"},
+                               "Hamster", "Golden Lab", "T-Rex"},
         ["Dont Sell Pet If Weight > x"] = 10 -- Script dont sell pet if this weight >= 10
     },
     ["Webhook Mode"] = {
@@ -126,7 +126,7 @@ getgenv().Config = {
         ["Enable Rejoin After X Time"] = false,
         ["Rejoin After X Time"] = 60 -- Minutes
     },
-    ["Limit Tree"] = 150,
+    ["Limit Tree"] = 250,
     ["Mutation Skips"] = { -- Skip Havest
         ["Pollinated"] = false,
         ["Disco"] = false,
@@ -146,4 +146,10 @@ getgenv().Config = {
         ["Shocked"] = false
     }
 }
-
+setfpscap(getgenv().Config["FPS"])
+script_key = "HkIPLfWTjOLhSUjsDSPFvNdyZwGtBuYn";
+repeat
+    wait()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/21a4253131c0bb22c0d4b421f6d0d59c.lua"))()
+    task.wait(10)
+until getgenv().Loaded

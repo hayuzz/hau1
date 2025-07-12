@@ -146,10 +146,4 @@ getgenv().Config = {
         ["Shocked"] = false
     }
 }
-setfpscap(getgenv().Config["FPS"])
-script_key = "RLxKKcDiWdnMYkoDrtJUPozgVqXtXQRU";
-repeat
-    wait()
-    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/791a1cc069605b60b85413847f6e5d2f.lua"))()
-    task.wait(10)
-until getgenv().Loaded
+

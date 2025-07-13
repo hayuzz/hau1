@@ -2,6 +2,7 @@ getgenv().Config = {
     ["Time To Sell"] = 35, -- Seconds
     ["Craft Event"] = {
         ["Crafters Seed Pack"] = true,
+        ["Crafters Seed Pack"] = true,
         ["Anti Bee Egg"] = true
     },
     ["Dont Open Pack"] = false,
@@ -76,7 +77,7 @@ getgenv().Config = {
     },
     ["Plant Candy"] = false,
     ["PetNeedSend"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly", "Mimic Octopus",
-                       "Pterodactyl", "Brontosaurus", "Fennec Fox", "T-Rex"},
+                       "Pterodactyl", "Brontosaurus", "Fennec Fox", "T-Rex", "Spinosaurus" , "Ankylosaurus", "Dilophosaurus"},
     ["Destroy Mode"] = {
         ["Auto Destroy when have money"] = 1000000, -- its will destroy all trees select when money >= select
         ["Mode Destroy"] = "Auto", -- "Custom"
@@ -94,7 +95,7 @@ getgenv().Config = {
         ["Auto Trade Eggs"] = true,
         ["Pet Dont Trade"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly",
                                "Mimic Octopus", "Brontosaurus", "Pterodactyl", "Fennec Fox", "Axolotl", "Hyacinth Macaw",
-                               "Hamster", "Golden Lab", "T-Rex"}
+                               "Hamster", "Golden Lab", "T-Rex" ,"Spinosaurus" , "Ankylosaurus", "Dilophosaurus"}
     },
     ["Note"] = "Cyndral Hub",
     ["Pet Mode"] = {
@@ -109,11 +110,11 @@ getgenv().Config = {
             ["Enable"] = true,
             ["Black List Pet For Upgrade Slots"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee",
                                                     "Butterfly", "Mimic Octopus", "Pterodactyl", "Brontosaurus", "Fennec Fox",
-                                                    "Axolotl", "Hyacinth Macaw", "Hamster", "T-Rex"}
+                                                    "Axolotl", "Hyacinth Macaw", "Hamster", "T-Rex" ,"Spinosaurus" , "Ankylosaurus", "Dilophosaurus"}
         },
         ["Pet Dont Delete"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly",
                                "Mimic Octopus", "Brontosaurus", "Pterodactyl", "Fennec Fox", "Axolotl", "Hyacinth Macaw",
-                               "Hamster", "Golden Lab", "T-Rex"},
+                               "Hamster", "Golden Lab", "T-Rex" ,"Spinosaurus" , "Ankylosaurus", "Dilophosaurus"},
         ["Dont Sell Pet If Weight > x"] = 10 -- Script dont sell pet if this weight >= 10
     },
     ["Webhook Mode"] = {

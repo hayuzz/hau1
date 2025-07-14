@@ -102,11 +102,12 @@ getgenv().Config = {
                                "Mimic Octopus", "Brontosaurus", "Pterodactyl", "Fennec Fox", "Axolotl", "Hyacinth Macaw",
                                "Scarlet Macaw", "Spinosaurus", "Ankylosaurus", "Dilophosaurus", "T-Rex"}
     },
-    ["Note"] = "Cyndral Hub",
+    ["Note"] = "HauNe2.1",
     ["Pet Mode"] = {
         ["Sell Pet"] = true,
         ["Equip Pet"] = true,
         ["Name Pet Equip"] = {
+            ["Rooster"] = true,
             ["Bald Eagle"] = true,
             ["Chicken"] = true
         },

@@ -126,7 +126,7 @@ getgenv().Config = {
     },
     ["Webhook Mode"] = {
         ["Enable Send Pet Weight"] = true,
-        ["Weight"] = 10 -- if Weight >= 10 they will send wh
+        ["Weight"] = 6 -- if Weight >= 10 they will send wh
     },
     ["Rejoin Mode"] = {
         ["Auto Rejoin When Error Module Egg"] = true,

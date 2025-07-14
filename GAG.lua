@@ -2,7 +2,6 @@ getgenv().Config = {
     ["Time To Sell"] = 35, -- Seconds
     ["Craft Event"] = {
         ["Crafters Seed Pack"] = true,
-        ["Crafters Seed Pack"] = true,
         ["Anti Bee Egg"] = true
     },
     ["Dont Open Pack"] = false,
@@ -56,9 +55,9 @@ getgenv().Config = {
             ["Place"] = true,
             ["Priority"] = 3
         },
-        ["Bee Egg"] = {
+        ["Common Egg"] = {
             ["Buy"] = true,
-            ["Place"] = false,
+            ["Place"] = true,
             ["Priority"] = 8
         },
         ["Dinosaur Egg"] = {
@@ -72,12 +71,13 @@ getgenv().Config = {
         ["Buy Sprinkler"] = true,
         ["Basic Sprinkler"] = true,
         ["Advanced Sprinkler"] = true,
+
         ["Master Sprinkler"] = true,
         ["Godly Sprinkler"] = true
     },
     ["Plant Candy"] = false,
     ["PetNeedSend"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly", "Mimic Octopus",
-                       "Pterodactyl", "Brontosaurus", "Fennec Fox", "T-Rex", "Spinosaurus" , "Ankylosaurus", "Dilophosaurus"},
+                       "Brontosaurus", "Fennec Fox", "Spinosaurus", "Ankylosaurus", "Dilophosaurus", "T-Rex"},
     ["Destroy Mode"] = {
         ["Auto Destroy when have money"] = 1000000, -- its will destroy all trees select when money >= select
         ["Mode Destroy"] = "Auto", -- "Custom"
@@ -95,14 +95,14 @@ getgenv().Config = {
         ["Auto Trade Eggs"] = true,
         ["Pet Dont Trade"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly",
                                "Mimic Octopus", "Brontosaurus", "Pterodactyl", "Fennec Fox", "Axolotl", "Hyacinth Macaw",
-                               "Hamster", "Golden Lab", "T-Rex" ,"Spinosaurus" , "Ankylosaurus", "Dilophosaurus"}
+                               "Scarlet Macaw", "Spinosaurus", "Ankylosaurus", "Dilophosaurus", "T-Rex"}
     },
     ["Note"] = "Cyndral Hub",
     ["Pet Mode"] = {
         ["Sell Pet"] = true,
         ["Equip Pet"] = true,
         ["Name Pet Equip"] = {
-            ["Night Owl"] = true,
+            ["Bald Eagle"] = true,
             ["Chicken"] = true
         },
         ["Max Slot Pet To Sell"] = 1, -- If Total Pet In Inventory >= ["Max Slot Pet To Sell"] script will sell pet
@@ -110,11 +110,11 @@ getgenv().Config = {
             ["Enable"] = true,
             ["Black List Pet For Upgrade Slots"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee",
                                                     "Butterfly", "Mimic Octopus", "Pterodactyl", "Brontosaurus", "Fennec Fox",
-                                                    "Axolotl", "Hyacinth Macaw", "Hamster", "T-Rex" ,"Spinosaurus" , "Ankylosaurus", "Dilophosaurus"}
+                                                    "Spinosaurus", "Ankylosaurus", "Dilophosaurus", "Hyacinth Macaw", "Scarlet Macaw", "T-Rex"}
         },
         ["Pet Dont Delete"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly",
                                "Mimic Octopus", "Brontosaurus", "Pterodactyl", "Fennec Fox", "Axolotl", "Hyacinth Macaw",
-                               "Hamster", "Golden Lab", "T-Rex" ,"Spinosaurus" , "Ankylosaurus", "Dilophosaurus"},
+                               "Scarlet Macaw", "Spinosaurus", "Ankylosaurus", "Dilophosaurus", "T-Rex"},
         ["Dont Sell Pet If Weight > x"] = 10 -- Script dont sell pet if this weight >= 10
     },
     ["Webhook Mode"] = {

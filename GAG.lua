@@ -55,7 +55,12 @@ getgenv().Config = {
             ["Place"] = true,
             ["Priority"] = 3
         },
-        ["Common Egg"] = {
+        ["Uncommon Egg"] = {
+            ["Buy"] = true,
+            ["Place"] = true,
+            ["Priority"] = 9
+        },
+        ["Rare Egg"] = {
             ["Buy"] = true,
             ["Place"] = true,
             ["Priority"] = 8

@@ -59,6 +59,11 @@ getgenv().Config = {
         ["Common Egg"] = {
             ["Buy"] = true,
             ["Place"] = true,
+            ["Priority"] = 10
+        },
+        ["Rare Summer Egg"] = {
+            ["Buy"] = true,
+            ["Place"] = true,
             ["Priority"] = 9
         },
         ["Rare Egg"] = {
@@ -110,6 +115,7 @@ getgenv().Config = {
         ["Name Pet Equip"] = {
             ["Rooster"] = true,
             ["Bald Eagle"] = true,
+            ["Seal"] = true,
             ["Chicken"] = true
         },
         ["Max Slot Pet To Sell"] = 1, -- If Total Pet In Inventory >= ["Max Slot Pet To Sell"] script will sell pet
@@ -121,7 +127,7 @@ getgenv().Config = {
         },
         ["Pet Dont Delete"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly",
                                "Mimic Octopus", "Brontosaurus", "Pterodactyl", "Fennec Fox", "Axolotl", "Hyacinth Macaw",
-                               "Scarlet Macaw", "Spinosaurus", "Ankylosaurus", "Dilophosaurus","Rooster", "T-Rex"},
+                               "Scarlet Macaw", "Spinosaurus", "Ankylosaurus", "Dilophosaurus","Rooster", "Seal", "T-Rex"},
         ["Dont Sell Pet If Weight > x"] = 10 -- Script dont sell pet if this weight >= 10
     },
     ["Webhook Mode"] = {

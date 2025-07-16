@@ -1,3 +1,7 @@
+repeat
+    wait(35)
+until game:IsLoaded()
+task.wait(10)
 getgenv().Config = {
     ["Time To Sell"] = 35, -- Seconds
     ["Craft Event"] = {
@@ -32,48 +36,56 @@ getgenv().Config = {
         ["Mythical Egg"] = {
             ["Buy"] = true,
             ["Place"] = true,
-            ["Priority"] = 7
+            ["Priority"] = 8
         },
         ["Oasis Egg"] = {
             ["Place"] = true,
-            ["Priority"] = 4
+            ["Priority"] = 5
         },
         ["Anti Bee Egg"] = {
             ["Place"] = true,
-            ["Priority"] = 2
+            ["Priority"] = 3
         },
         ["Night Egg"] = {
             ["Place"] = true,
-            ["Priority"] = 5
+            ["Priority"] = 6
         },
         ["Bug Egg"] = {
             ["Buy"] = true,
             ["Place"] = true,
-            ["Priority"] = 6
+            ["Priority"] = 7
         },
         ["Paradise Egg"] = {
             ["Buy"] = true,
             ["Place"] = true,
-            ["Priority"] = 3
+            ["Priority"] = 4
         },
         ["Common Egg"] = {
             ["Buy"] = true,
             ["Place"] = true,
-            ["Priority"] = 10
+            ["Priority"] = 12
         },
         ["Rare Summer Egg"] = {
             ["Buy"] = true,
             ["Place"] = true,
-            ["Priority"] = 9
+            ["Priority"] = 10
         },
         ["Rare Egg"] = {
             ["Buy"] = true,
             ["Place"] = true,
-            ["Priority"] = 8
+            ["Priority"] = 9
+        },
+        ["Primal Egg"] = {
+            ["Place"] = true,
+            ["Priority"] = 1
+        },
+        ["Bee Egg"] = {
+            ["Place"] = true,
+            ["Priority"] = 11
         },
         ["Dinosaur Egg"] = {
             ["Place"] = true,
-            ["Priority"] = 1
+            ["Priority"] = 2
         },
     },
 

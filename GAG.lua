@@ -96,7 +96,7 @@ getgenv().Config = {
     },
     ["Plant Candy"] = false,
     ["PetNeedSend"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly", "Mimic Octopus",
-                       "Brontosaurus", "Fennec Fox", "Spinosaurus", "Ankylosaurus", "Dilophosaurus", "T-Rex"},
+                       "Brontosaurus", "Fennec Fox", "Spinosaurus", "Ankylosaurus", "T-Rex"},
     ["Destroy Mode"] = {
         ["Auto Destroy when have money"] = 1000000, -- its will destroy all trees select when money >= select
         ["Mode Destroy"] = "Auto", -- "Custom"
@@ -115,7 +115,7 @@ getgenv().Config = {
         ["Auto Trade Eggs"] = true,
         ["Pet Dont Trade"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly",
                                "Mimic Octopus", "Brontosaurus", "Pterodactyl", "Fennec Fox", "Axolotl", "Hyacinth Macaw",
-                               "Scarlet Macaw", "Spinosaurus", "Ankylosaurus", "Dilophosaurus", "T-Rex"}
+                               "Scarlet Macaw", "Spinosaurus", "Ankylosaurus", "T-Rex"}
     },
     ["Note"] = "",
     ["Pet Mode"] = {
@@ -126,6 +126,9 @@ getgenv().Config = {
             ["Scarlet Macaw"] = true,
             ["Pterodactyl"] = true,
             ["Seal"] = true,
+            ["Dilophosaurus"] = true,
+            ["Iguanodon"] = true,
+            ["Pachycephalosaurus"] = true,
             ["Chicken"] = true
         },
         ["Max Slot Pet To Sell"] = 30, -- If Total Pet In Inventory >= ["Max Slot Pet To Sell"] script will sell pet
@@ -133,7 +136,7 @@ getgenv().Config = {
             ["Enable"] = true,
             ["Black List Pet For Upgrade Slots"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee",
                                                     "Butterfly", "Mimic Octopus", "Brontosaurus", "Fennec Fox",
-                                                    "Spinosaurus", "Ankylosaurus", "Dilophosaurus", "Hyacinth Macaw", "T-Rex"}
+                                                    "Spinosaurus", "Ankylosaurus", "Hyacinth Macaw", "T-Rex"}
         },
         ["Pet Dont Delete"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly",
                                "Mimic Octopus", "Brontosaurus", "Pterodactyl", "Fennec Fox", "Axolotl", "Hyacinth Macaw",

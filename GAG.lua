@@ -31,7 +31,7 @@ getgenv().Config = {
         ["Kiwi"] = 44
     },
     ["Keep Seed"] = {"Dragon Pepper", "Elephant Ears", "Sunflower", "Candy Blossom"},
-    ["FPS"] = 5,
+    ["FPS"] = 3,
     ["Egg"] = {
         ["Common Egg"] = {
             ["Buy"] = true,
@@ -117,7 +117,7 @@ getgenv().Config = {
                                "Mimic Octopus", "Brontosaurus", "Pterodactyl", "Fennec Fox", "Axolotl", "Hyacinth Macaw",
                                "Scarlet Macaw", "Spinosaurus", "Ankylosaurus", "T-Rex"}
     },
-    ["Note"] = "",
+    ["Note"] = "hau1",
     ["Pet Mode"] = {
         ["Sell Pet"] = true,
         ["Equip Pet"] = true,
@@ -128,7 +128,7 @@ getgenv().Config = {
             ["Pachycephalosaurus"] = true,
             ["Chicken"] = true
         },
-        ["Max Slot Pet To Sell"] = 10, -- If Total Pet In Inventory >= ["Max Slot Pet To Sell"] script will sell pet
+        ["Max Slot Pet To Sell"] = 40, -- If Total Pet In Inventory >= ["Max Slot Pet To Sell"] script will sell pet
         ["Upgrade Slot Egg"] = {
             ["Enable"] = true,
             ["Black List Pet For Upgrade Slots"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee",

@@ -44,8 +44,8 @@ getgenv().gagConfig = {
     SEED_WEBHOOK_URL = "", 
     NOTIFY_PETS = { "Fennec Fox", "Disco Bee", "Raccoon", "Dragonfly", "Butterfly", "Mimic Octopus", "T-Rex", "Spinosaurus", "Red Fox", "Brontosaurus", "Ankylosaurus", "Dilophosaurus" },
     NOTIFY_PETS_WEIGHT = 5,
-    DISCORD_ID = "",
-    WEBHOOK_NOTE = "ten nv",
+    DISCORD_ID = "452715592558968842",
+    WEBHOOK_NOTE = "hau oi co pet",
     SHOW_WEBHOOK_USERNAME = true,
 }
 

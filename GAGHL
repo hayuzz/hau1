@@ -1,73 +1,149 @@
-repeat task.wait() until game:IsLoaded() 
+getgenv().Config = {
+    ["Time To Sell"] = 35, -- Seconds
+    ["Craft Event"] = {
+        ["Crafters Seed Pack"] = true,
+        ["Anti Bee Egg"] = true
+    },
+    ["Dont Open Pack"] = false,
+    ["Mode Plant"] = "Auto", -- "Custom"
 
-repeat task.wait() until game:GetService('Players') and game:GetService('Players').LocalPlayer and game:GetService('Players').LocalPlayer.Character
+    ["Seed"] = { -- Seed Plant Custom
+        ["Strawberry"] = 44,
+        ["Blueberry"] = 44,
+        ["Tomato"] = 44,
+        ["Loquat"] = 44,
+        ["Pineapple"] = 44,
+        ["Carrot"] = 44,
+        ["Bell Pepper"] = 44,
+        ["Green Apple"] = 44,
+        ["Feijoa"] = 44,
+        ["Avocado"] = 44,
+        ["Sugar Apple"] = 44,
+        ["Banana"] = 44,
+        ["Prickly Pear"] = 44,
+        ["Watermelon"] = 44,
+        ["Kiwi"] = 44
+    },
+    ["Keep Seed"] = {"Dragon Pepper", "Elephant Ears", "Sunflower", "Candy Blossom"},
+    ["FPS"] = 2,
+    ["Egg"] = {
+        ["Common Egg"] = {
+            ["Buy"] = true,
+            ["Place"] = true,
+            ["Priority"] = 20
+        },
+        ["Rare Summer Egg"] = {
+            ["Buy"] = true,
+            ["Place"] = true,
+            ["Priority"] = 10
+        },
+        ["Mythical Egg"] = {
+            ["Buy"] = true,
+            ["Place"] = true,
+            ["Priority"] = 7
+        },
+        ["Rare Egg"] = {
+            ["Buy"] = true,
+            ["Place"] = true,
+            ["Priority"] = 11
+        },
+        ["Anti Bee Egg"] = {
+            ["Place"] = true,
+            ["Priority"] = 5
+        },
+        ["Night Egg"] = {
+            ["Place"] = true,
+            ["Priority"] = 6
+        },
+        ["Bug Egg"] = {
+            ["Buy"] = true,
+            ["Place"] = true,
+            ["Priority"] = 3
+        },
+        ["Paradise Egg"] = {
+            ["Buy"] = true,
+            ["Place"] = true,
+            ["Priority"] = 4
+        },
+        ["Bee Egg"] = {
+            ["Buy"] = true,
+            ["Place"] = true,
+            ["Priority"] = 10
+        },
+        ["Dinosaur Egg"] = {
+            ["Place"] = true,
+            ["Priority"] = 2
+        },
+        ["Zen Egg"] = {
+            ["Place"] = true,
+            ["Priority"] = 1
+        },
+        ["Primal Egg"] = {
+            ["Place"] = true,
+            ["Priority"] = 1
+        },
+    },
 
-local Players = game:GetService('Players')
-local Client = Players.LocalPlayer
 
-_G.EnableFriendRequest = true
-_G.EnableAutoAcceptFriendRequest = true
+    ["Limit Tree"] = 250,
+    ["Sprinkler"] = {
+        ["Place Sprinkler"] = true,
+        ["Buy Sprinkler"] = true,
+        ["Basic Sprinkler"] = true,
+        ["Advanced Sprinkler"] = true,
+        ["Master Sprinkler"] = true,
+        ["Godly Sprinkler"] = true
+    },
+    ["PetNeedSend"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly", "Mimic Octopus",
+                       "Brontosaurus", "Fennec Fox", "Spinosaurus", "Ankylosaurus", "T-Rex", "Kappa", "Kitsune"},
+    ["Destroy Mode"] = {
+        ["Auto Destroy when have money"] = 1000000, -- its will destroy all trees select when money >= select
+        ["Mode Destroy"] = "Auto", -- "Custom"
+        ["Trees"] = {"Strawberry", "Blueberry", "Corn", "Orange Tulip", "Carrot"},
+        ["Rarity Destroy Auto"] = {"Common", "Uncommon", "Rare", "Legendary"},
+        ["Destroy Untill"] = 150
+    },
+    ["Zen Event"] = {
+        ["Restock Max Cost"] = 16000000,
+        ["Zen Seed Pack"] = false,
+        ["Zen Egg"] = true,
+        ["Koi"] = false,
+        ["Spiked Mango"] = false
+    },
+    ["Url"] = "https://discord.com/api/webhooks/1389513606399266888/PPxC1xgCfkbUlGLfqOQqL-s-MF_0M5iOCHE77k4c_qOO-xtzAMv77ju9bhsvzdQxVKS7", -- Webhook 
+    ["Boost FPS"] = true,
+    ["Black Screen"] = true,
+    ["Note"] = "Hau1 oi co pet",
+    ["Pet Mode"] = {
+        ["Sell Pet"] = true,
+        ["Equip Pet"] = true,
+        ["Name Pet Equip"] = {
+            ["Rooster"] = true,
+            ["Seal"] = true,
+            ["Tanchozuru"] = true,
 
-local interval = 60
+        },
+        ["Max Slot Pet To Sell"] = 10, -- If Total Pet In Inventory >= ["Max Slot Pet To Sell"] script will sell pet
+        ["Upgrade Slot Egg"] = {
+            ["Enable"] = true,
+            ["Pet"] = {"Starfish"}
 
-local function SendFriendRequests()
-    for _, player in ipairs(Players:GetPlayers()) do
-        if player ~= Client then  
-            Client:RequestFriendship(player)
-            warn("Đã gửi yêu cầu kết bạn tới:", player.Name)
-        end
-        wait(10) 
-    end
-end
+        },
+        ["Pet Dont Delete"] = {"Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly",
+                               "Mimic Octopus", "Brontosaurus", "Pterodactyl", "Fennec Fox", "Axolotl", "Hyacinth Macaw",
+                               "Scarlet Macaw", "Spinosaurus", "Ankylosaurus", "Dilophosaurus","Rooster", "Seal", "Tanchozuru", "Kappa", "Kitsune"},
+        ["Dont Sell Pet If Weight > x"] = 5 -- Script dont sell pet if this weight >= 10
+    },
+    ["Webhook Mode"] = {
+        ["Enable Send Pet Weight"] = false,
+        ["Weight"] = 5 -- if Weight >= 10 they will send wh
+    }
 
-local function AutoAcceptFriendRequests()
-
-    Client.FriendRequestEvent:Connect(function(requestingPlayer)
-        if _G.EnableAutoAcceptFriendRequest then
-            print(requestingPlayer)
-            Client:RequestFriendship(requestingPlayer) 
-            warn("Đã chấp nhận yêu cầu kết bạn từ:", requestingPlayer.Name)
-        end
-    end)
-end
-
-local function MainLoop()
-    while true do
-        if _G.EnableFriendRequest then
-            SendFriendRequests()
-        end
-        wait(interval)
-    end
-end
-
-
-local messages = {}
-local interval = 3600
-
-function sendMessage()
-    local msg = messages[math.random(#messages)] 
-    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "All") 
-    wait(interval)
-    sendMessage()
-end
-
-
-task.spawn(function()
-    AutoAcceptFriendRequests()
-end)
-
-task.spawn(function()
-    MainLoop()
-end)
-
-task.spawn(function()
-    wait(5) 
-    sendMessage()
-end)
-
-Client.Idled:connect(function()
-    local VirtualUser = game:GetService('VirtualUser')
-    VirtualUser:Button2Down(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-    wait(1)
-    VirtualUser:Button2Up(Vector2.new(0, 0), workspace.CurrentCamera.CFrame)
-end)
+}
+setfpscap(getgenv().Config["FPS"])
+script_key = "RLxKKcDiWdnMYkoDrtJUPozgVqXtXQRU";
+repeat
+    wait()
+    loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/791a1cc069605b60b85413847f6e5d2f.lua"))()
+    task.wait(10)
+until getgenv().Loadeds

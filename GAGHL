@@ -85,7 +85,7 @@ getgenv().Config = {
     },
 
 
-    ["Limit Tree"] = 250,
+    ["Limit Tree"] = 100,
     ["Sprinkler"] = {
         ["Place Sprinkler"] = true,
         ["Buy Sprinkler"] = true,

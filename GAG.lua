@@ -11,7 +11,7 @@ getgenv().gagConfig = {
     -- General:
     AUTO_UPDATE_RESTART = true,
     REDEEM_CODES = {},
-    EXTRA_PET_SLOTS = 3,
+    EXTRA_PET_SLOTS = 2,
     EXTRA_EGG_SLOTS = 3,
     EXTRA_PET_EQUIP_SLOTS = 5,
     MUTATE_PET = { "Spinosaurus", "T-Rex", "Fennec Fox", "Butterfly", "Disco Bee", "Raccoon", "Dragonfly", "Mimic Octopus", "Dilophosaurus", "Seal", "Blood Kiwi", "Rooster" },  -- Pet Names

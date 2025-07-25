@@ -17,7 +17,7 @@ getgenv().gagConfig = {
     MUTATE_PET = { "Spinosaurus", "T-Rex", "Fennec Fox", "Butterfly", "Disco Bee", "Raccoon", "Dragonfly", "Mimic Octopus", "Dilophosaurus", "Seal", "Blood Kiwi", "Rooster" },  -- Pet Names
     OPEN_ALL_SEED_PACK = true,
     ADD_FRIEND = true,
-    FAST_LEVEL_PET = true,
+    FAST_LEVEL_PET = false,
 
     MAX_PLANTS = 150,
     DESTROY_UNTIL_MIN_PLANTS = 130,

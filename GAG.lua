@@ -34,11 +34,13 @@ getgenv().gagConfig = {
     FAVOURITE_FRUIT_MUTATIONS = {},  -- Stop Autosell
     SKIP_HARVEST_MUTATIONS = {},  -- Stop Harvest
 
-    KEEP_PETS = { "Tanchozuru", "Seal", "Kitsune", "Kappa", "Dilophosaurus", "Bald Eagle", "Ankylosaurus", "Spinosaurus", "Pterodactyl", "Brontosaurus", "T-Rex", "Fennec Fox", "Blood Kiwi", "Starfish", "Rooster", ["Hamster"] = 2, "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Chicken Zombie", "Capybara", ["Dog"] = 1, ["Bunny"] = 1, ["Golden Lab"] = 1 },
+    KEEP_PETS = { "Corrupted Kitsune", "Tanchozuru", "Seal", "Kitsune", "Kappa", "Dilophosaurus", "Bald Eagle", "Ankylosaurus", "Spinosaurus", "Pterodactyl", "Brontosaurus", "T-Rex", "Fennec Fox", "Blood Kiwi", "Starfish", "Rooster", ["Hamster"] = 2, "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Chicken Zombie", "Capybara", ["Dog"] = 1, ["Bunny"] = 1, ["Golden Lab"] = 1 },
     KEEP_PETS_WEIGHT = 6,
 
      -- EQUIP_PETS Priority (Left -> Right)
     EQUIP_PETS = { "Capybara", ["Tanchozuru"] = 2 , ["Seal"] = 4, ["Rooster"] = 2, "Starfish" },
+    USE_PETS_FOR_UPGRADE_SLOT = { "Starfish" },
+    REMOVE_PET_MAX_UPGRADE = { "Capybara", "Starfish" },  -- Unequip from garden
 
     BUY_GEAR_SHOP = { "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
     USE_SPRINKLER = { "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler" },

@@ -7,6 +7,7 @@ getgenv().gagConfig = {
     BUY_TRAVELING_MERCHANT = { "Bee Egg", "Loquat", "Feijoa", "Pitcher Plant" },
     BUY_EVENT_SHOP = {"Zen Egg"},
     MAX_EVENT_RESTOCK_SHECKLES = 2000000000000,
+    PLACE_ALL_EVENT_STAFF = true,
 
     -- General:
     AUTO_UPDATE_RESTART = true,

@@ -94,7 +94,6 @@ getgenv().Config = {
         ["Zen Seed Pack"] = true,
         ["Zen Egg"] = true,
         ["Koi"] = true,
-        ["Raiju"] = true,
         ["Spiked Mango"] = true
     },
     ["Url"] = "https://discord.com/api/webhooks/1398736831641686026/py9uM8qq7bUMjea75mvcxdLtOzhmSMxHf5ZAUyL41jfT4N9H-3H_EQCixFV6cYpEI64a", -- Webhook 

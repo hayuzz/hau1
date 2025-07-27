@@ -12,8 +12,8 @@ getgenv().gagConfig = {
     -- General:
     AUTO_UPDATE_RESTART = true,
     REDEEM_CODES = {},
-    EXTRA_PET_SLOTS = 2,
-    EXTRA_EGG_SLOTS = 2,
+    EXTRA_PET_SLOTS = 5,
+    EXTRA_EGG_SLOTS = 5,
     EXTRA_PET_EQUIP_SLOTS = 0,
     OPEN_ALL_SEED_PACK = true,
     ADD_FRIEND = true,

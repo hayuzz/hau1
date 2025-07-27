@@ -91,7 +91,6 @@ getgenv().Config = {
     },
     ["Zen Event"] = {
         ["Restock Max Cost"] = 16000000,
-        ["Zen Seed Pack"] = true,
         ["Zen Egg"] = true,
         ["Koi"] = true,
         ["Spiked Mango"] = true

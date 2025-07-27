@@ -5,16 +5,16 @@ getgenv().gagConfig = {
     -- Event:
     CRAFT_EVENT = { "Anti Bee Egg", "Lightning Rod" },
     BUY_TRAVELING_MERCHANT = { "Bee Egg", "Loquat", "Feijoa", "Pitcher Plant" },
-    BUY_EVENT_SHOP = {"Zen Egg", "Koi" },
-    MAX_EVENT_RESTOCK_SHECKLES = 2000000000000,
+    BUY_EVENT_SHOP = {"Zen Egg", "Koi",  "Raiju" },
+    MAX_EVENT_RESTOCK_SHECKLES = 0,
     PLACE_ALL_EVENT_STAFF = true,
 
     -- General:
     AUTO_UPDATE_RESTART = true,
     REDEEM_CODES = {},
-    EXTRA_PET_SLOTS = 5,
-    EXTRA_EGG_SLOTS = 5,
-    EXTRA_PET_EQUIP_SLOTS = 5,
+    EXTRA_PET_SLOTS = 2,
+    EXTRA_EGG_SLOTS = 2,
+    EXTRA_PET_EQUIP_SLOTS = 0,
     MUTATE_PET = { "Spinosaurus", "T-Rex", "Fennec Fox", "Butterfly", "Disco Bee", "Raccoon", "Dragonfly", "Mimic Octopus", "Dilophosaurus", "Seal", "Blood Kiwi", "Rooster" },  -- Pet Names
     OPEN_ALL_SEED_PACK = true,
     ADD_FRIEND = true,

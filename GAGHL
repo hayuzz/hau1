@@ -117,7 +117,7 @@ getgenv().Config = {
         },
         ["Pet Dont Delete"] = { "Corrupted Kitsune", "Raiju", "Mizuchi", "Queen Bee", "Red Fox", "Dragonfly", "Raccoon", "Disco Bee", "Butterfly",
                                "Mimic Octopus", "Meerkat", "Sand Snake", "Fennec Fox", "Axolotl", "Hyacinth Macaw",
-                               "Hamster", "Golden Lab", "T-Rex", "Spinosaurus", "Ankylosaurus", "Kitsune"},
+                               "Hamster", "Kappa", "T-Rex", "Spinosaurus", "Ankylosaurus", "Kitsune"},
         ["Dont Sell Pet If Weight > x"] = 6 -- Script dont sell pet if this weight >= 10
     },
     ["Webhook Mode"] = {

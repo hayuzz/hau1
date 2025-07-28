@@ -5,7 +5,7 @@ getgenv().gagConfig = {
     -- Event:
     CRAFT_EVENT = { "Anti Bee Egg", "Lightning Rod" },
     BUY_TRAVELING_MERCHANT = { "Bee Egg", "Loquat", "Feijoa", "Pitcher Plant" },
-    BUY_EVENT_SHOP = {"Zen Egg", "Koi",  "Raiju" },
+    BUY_EVENT_SHOP = {"Zen Egg", "Koi", "Raiju" },
     MAX_EVENT_RESTOCK_SHECKLES = 0,
     PLACE_ALL_EVENT_STAFF = true,
 
@@ -44,7 +44,7 @@ getgenv().gagConfig = {
     BUY_GEAR_SHOP = { "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
     USE_SPRINKLER = { "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler" },
 
-    PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1389513606399266888/PPxC1xgCfkbUlGLfqOQqL-s-MF_0M5iOCHE77k4c_qOO-xtzAMv77ju9bhsvzdQxVKS7",
+    PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1398736831641686026/py9uM8qq7bUMjea75mvcxdLtOzhmSMxHf5ZAUyL41jfT4N9H-3H_EQCixFV6cYpEI64a",
     SEED_WEBHOOK_URL = "", 
     NOTIFY_PETS = { "Corrupted Kitsune", "Raiju", "Mizuchi", "Kitsune", "Koi", "Fennec Fox", "Disco Bee", "Raccoon", "Dragonfly", "Butterfly", "Mimic Octopus", "T-Rex", "Spinosaurus", "Red Fox"},
     DISCORD_ID = "452715592558968842",

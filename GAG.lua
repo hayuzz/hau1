@@ -32,12 +32,12 @@ getgenv().gagConfig = {
     FAVOURITE_FRUIT_MUTATIONS = {},  -- Stop Autosell
     SKIP_HARVEST_MUTATIONS = {},  -- Stop Harvest
 
-    KEEP_PETS = { "Corrupted Kitsune", "Raiju", "Mizuchi", "Tanchozuru", "Seal", "Kitsune", "Kappa", "Dilophosaurus", "Bald Eagle", "Ankylosaurus", "Spinosaurus", "Pterodactyl", "Brontosaurus", "T-Rex", "Fennec Fox", "Blood Kiwi", "Starfish", "Rooster", ["Hamster"] = 2, "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Chicken Zombie", ["Capybara"] = 1, ["Dog"] = 1, ["Bunny"] = 1, ["Golden Lab"] = 1 },
+    KEEP_PETS = {"Kodama", "Corrupted Kitsune", "Raiju", "Mizuchi", "Tanchozuru", "Seal", "Kitsune", "Kappa", "Dilophosaurus", "Bald Eagle", "Ankylosaurus", "Spinosaurus", "Pterodactyl", "Brontosaurus", "T-Rex", "Fennec Fox", "Blood Kiwi", "Starfish", "Rooster", ["Hamster"] = 2, "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Chicken Zombie", ["Capybara"] = 1, ["Dog"] = 1, ["Bunny"] = 1, ["Golden Lab"] = 1 },
     KEEP_PETS_WEIGHT = {},
     KEEP_PETS_AGE = {},
 
      -- EQUIP_PETS Priority (Left -> Right)
-    EQUIP_PETS = { "Tanchozuru", ["Seal"] = 2, ["Blood Kiwi"] = 2, ["Rooster"] = 2, "Starfish" , ["Capybara"] = 1},
+    EQUIP_PETS = { "Kodama", "Tanchozuru", ["Seal"] = 2, ["Blood Kiwi"] = 2, ["Rooster"] = 2, "Starfish" , ["Capybara"] = 1},
     USE_PETS_FOR_UPGRADE_SLOT = { "Starfish" },
     REMOVE_PET_MAX_UPGRADE = { "Capybara", "Starfish" },  -- Unequip from garden
 

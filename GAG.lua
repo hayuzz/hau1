@@ -1,6 +1,6 @@
 script_key="XXFWbggeDvcglPVNoUEtVGCCQekLFWjq";
 setfpscap(3)
-
+task.wait(50)
 getgenv().gagConfig = {
     -- Event:
     CRAFT_EVENT = { "Anti Bee Egg", "Lightning Rod" },
@@ -37,7 +37,7 @@ getgenv().gagConfig = {
     KEEP_PETS_AGE = {},
 
      -- EQUIP_PETS Priority (Left -> Right)
-    EQUIP_PETS = {["Starfish"] = 2, "Bald Eagle", ["Tanchozuru"] = 1,  ["Capybara"] = 1, ["Seal"] = 4, ["Rooster"] = 2,},
+    EQUIP_PETS = { "Tanchozuru", ["Seal"] = 2, ["Blood Kiwi"] = 2, ["Rooster"] = 2, "Starfish" , ["Capybara"] = 1},
     USE_PETS_FOR_UPGRADE_SLOT = { "Starfish" },
     REMOVE_PET_MAX_UPGRADE = { "Capybara", "Starfish" },  -- Unequip from garden
 

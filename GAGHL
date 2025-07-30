@@ -26,6 +26,11 @@ getgenv().Config = {
     },
     ["Keep Seed"] = {"Dragon Pepper", "Elephant Ears", "Sunflower", "Candy Blossom"},
     ["Egg"] = {
+        ["Common Summer Egg"] = {
+            ["Buy"] = true,
+            ["Place"] = true,
+            ["Priority"] = 6
+        },
         ["Mythical Egg"] = {
             ["Buy"] = true,
             ["Place"] = true,
@@ -91,9 +96,10 @@ getgenv().Config = {
     },
     ["Zen Event"] = {
         ["Restock Max Cost"] = 16000000,
+        ["Zen Seed Pack"] = false,
         ["Zen Egg"] = true,
-        ["Koi"] = true,
-        ["Spiked Mango"] = true
+        ["Koi"] = false,
+        ["Spiked Mango"] = false
     },
     ["Url"] = "https://discord.com/api/webhooks/1398736831641686026/py9uM8qq7bUMjea75mvcxdLtOzhmSMxHf5ZAUyL41jfT4N9H-3H_EQCixFV6cYpEI64a", -- Webhook 
     ["Boost FPS"] = true,

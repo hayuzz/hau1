@@ -7,7 +7,7 @@ getgenv().ConfigsKaitun = {
 	["Rejoin When Update"] = true,
 	["Limit Tree"] = {
 		["Limit"] = 250,
-		["Destroy Untill"] = 250,
+		["Destroy Untill"] = 200,
 
 		["Safe Tree"] = {
 			"Moon Blossom",
@@ -185,7 +185,7 @@ getgenv().ConfigsKaitun = {
 
 	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1398736831641686026/py9uM8qq7bUMjea75mvcxdLtOzhmSMxHf5ZAUyL41jfT4N9H-3H_EQCixFV6cYpEI64a",
-		UrlSeed = "",
+		UrlSeed = "123",
 		PcName = "123",
 
 		Noti = {

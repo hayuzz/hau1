@@ -109,12 +109,12 @@ getgenv().Config = {
         ["Sell Pet"] = true,
         ["Equip Pet"] = true,
         ["Name Pet Equip"] = {
-            ["Starfish"] = 3,
-            ["Tanchozuru"] = 2,
             ["Bald Eagle"] = 5,
-            ["Capybara"] = 5,
             ["Seal"] = 5,
             ["Rooster"] = 5,
+            ["Tanchozuru"] = 2,
+            ["Starfish"] = 3,
+            ["Capybara"] = 1,
 
         },
         ["Max Slot Pet To Sell"] = 5, -- If Total Pet In Inventory >= ["Max Slot Pet To Sell"] script will sell pet

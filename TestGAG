@@ -146,7 +146,7 @@
 		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				["Starfish"] = { 2, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
+				["Starfish"] = { 2, 100, 1 }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
 				["Koi"] = { 8, 100, 5 },
 				["Seal"] = { 8, 100, 3 },
 				["Rooster"] = { 8, 100, 2 },

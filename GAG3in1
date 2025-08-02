@@ -164,6 +164,7 @@ getgenv().ConfigsKaitun = {
 			"French Fry Ferret",
 			"Spaghetti Sloth",
 			"Corrupted Kitsune",
+			"Corrupted Kodama",
 			"Raiju",
 			"Koi",
 			"Tanuki",
@@ -188,7 +189,7 @@ getgenv().ConfigsKaitun = {
 			"Blood Owl",
 			["Starfish"] = 10,
 		},
-		LockPet_Weight = 7, -- if Weight >= 10 they will locked
+		LockPet_Weight = 6, -- if Weight >= 10 they will locked
 	},
 
 	Webhook = {

@@ -157,6 +157,7 @@ getgenv().ConfigsKaitun = {
 			},
 		},
 		Locked = {
+			"Corrupted Kodama",
 			"Koi",
 			"Kitsune",
 			"Dilophosaurus",
@@ -175,7 +176,7 @@ getgenv().ConfigsKaitun = {
 			"Fennec Fox",
 			"Mimic Octopus",
 			"Red Fox",
-			"Kodama",
+			["Kodama"] = 7,
 			"Blood Owl",
 			["Starfish"] = 10,
 		},

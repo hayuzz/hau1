@@ -1,4 +1,4 @@
-getgenv().ConfigsKaitun = {
+ getgenv().ConfigsKaitun = {
 	["Block Pet Gift"] = true,
 
 	Collect_Cooldown = 60, -- cooldown to collect fruit
@@ -167,15 +167,10 @@ getgenv().ConfigsKaitun = {
 			"Corrupted Kodama",
 			"Raiju",
 			"Koi",
-			"Tanuki",
-			"Tanchozuru",
-			"Kappa",
 			"Kitsune",
 			"Dilophosaurus",
 			"Moon Cat",
-			"Capybara",
 			"Spinosaurus",
-			"Bear Bee",
 			"T-Rex",
 			"Brontosaurus",
 			"Disco Bee",

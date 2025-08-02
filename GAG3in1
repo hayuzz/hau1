@@ -1,17 +1,19 @@
 getgenv().ConfigsKaitun = {
-	["Stack Plant"] = true,
-	
+	["Block Pet Gift"] = true,
+
+	Collect_Cooldown = 60, -- cooldown to collect fruit
+	JustFuckingCollectAll = false, -- Collect all (fruit not wait mutation)
+
 	["Low Cpu"] = true,
-	["Auto Rejoin"] = false,
-	
-	["Rejoin When Update"] = true,
+	["Auto Rejoin"] = true,
+
+	["Rejoin When Update"] = false,
 	["Limit Tree"] = {
-		["Limit"] = 250,
-		["Destroy Untill"] = 200,
+		["Limit"] = 300,
+		["Destroy Untill"] = 280,
 
 		["Safe Tree"] = {
 			"Moon Blossom",
-			"Bone Blossom",
 			"Fossilight",
 		}
 	},
@@ -19,31 +21,8 @@ getgenv().ConfigsKaitun = {
 	Seed = {
 		Buy = {
 			Mode = "Auto", -- Custom , Auto
-			Custom = {
+			Custom = { -- any fruit u need to place
 				"Carrot",
-				"Bamboo",
-				"Pumpkin",
-				"Daffodil",
-				"Orange Tulip",
-				"Watermelon",
-				"Mushroom",
-				"Avocado",
-				"Feijoa",
-				"Cauliflower",
-				"Loquat",
-				"Green Apple",
-				"Nightshade",
-				"Firefly Fern",
-				"Soft Sunshine",
-				"Zen Rocks",
-				"Hinomai",
-				"Beanstalk",
-				"Ember Lily",
-				"Sunflower",
-				"Sugar Apple",
-				"Burning Bud",
-				"Giant Pinecone",
-				"Spiked Mango",
 			}
 		},
 		Place = {
@@ -72,33 +51,46 @@ getgenv().ConfigsKaitun = {
 	},
 
 	Events = {
-		["Traveling Shop"] = {
-			"Bee Egg",
-		},
-		Craft = {
-			"Anti Bee Egg",
-			"Primal Egg",
-		},
-		Shop = {
-			"Zen Egg",
-			"Koi",
+		["Cook Event"] = {
+			Minimum_Money = 30_000_000, -- minimum money to start play this event
 		},
 		["Zen Event"] = {
 			["Restocking"] = { -- Minimumthing to restock
-				Max_Restocks_Price = 2_000_000_000,
+				Max_Restocks_Price = 50_000_000,
 				Minimum_Money = 10_000_000,
 				Minimum_Chi = 200
 			},
 			["Doing"] = {
-				Minimum_Money = 10_000_000, -- minimum money to start play this event
-				First_Upgrade_Tree = 7,
+				Minimum_Money = 30_000_000, -- minimum money to start play this event
+				First_Upgrade_Tree = 4,
 				Maximum_Chi = 250,
+
 				-- // thing to skip doing
 				Skip_Fox = false, -- Skip The Middle Fox Trade (Corrupted Kitsune)
 				Skip_Corrupted_OldMan = false, -- Skip The OldMan Trade (Kodama)
 				-- If u need to skip Tranquill OldMan Set "First Upgrade Tree" To 0 and Max Chi To 99999
 			}
 		},
+		["Traveling Shop"] = {
+			"Bee Egg",
+		},
+		Craft = {
+			"Ancient Seed Pack",
+			"Anti Bee Egg",
+			"Primal Egg",
+		},
+		Shop = {
+			"Zen Egg",
+			"Zen Seed Pack",
+			"Spiked Mango",
+			"Pet Shard Tranquil",
+			"Pet Shard Corrupted",
+			"Koi",
+			"Soft Sunshine",
+			"Sakura Bush",
+			"Raiju",
+		},
+		Start_Do_Honey = 2_000_000 -- start trade fruit for honey at money
 	},
 
 	Gear = {
@@ -123,6 +115,7 @@ getgenv().ConfigsKaitun = {
 
 	Eggs = {
 		Place = {
+			"Gourmet Egg",
 			"Zen Egg",
 			"Primal Egg",
 			"Dinosaur Egg",
@@ -132,7 +125,9 @@ getgenv().ConfigsKaitun = {
 			"Bug Egg",
 			"Paradise Egg",
 			"Bee Egg",
+			"Rare Summer Egg",
 			"Mythical Egg",
+			"Common Egg",
 		},
 		Buy = {
 			"Bee Egg",
@@ -140,33 +135,48 @@ getgenv().ConfigsKaitun = {
 			"Paradise Egg",
 			"Anti Bee Egg",
 			"Night Egg",
+			"Rare Summer Egg",
 			"Bug Egg",
 			"Mythical Egg",
+			"Common Egg",
 		}
 	},
 
 	Pets = {
-		["Start Delete Pet At"] = 20,
+		["Start Delete Pet At"] = 40,
 		["Upgrade Slot"] = {
 			["Pet"] = {
-				["Starfish"] = { 2, 75, 1 },
-				["Kodama"] = { 6, 100, 2 },
+				["Starfish"] = { 2, 100, 1, true }, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
+				["Koi"] = { 8, 100 },
+				["Seal"] = { 8, 100 },
+				["Rooster"] = { 8, 100 },
 			},
 			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {
-				["Kodama"] = { 5, 1 },
+				["Koi"] = { 8, 100 },
+				["Seal"] = { 8, 100 },
+				["Rooster"] = { 8, 100 },
 			},
 		},
+		Favorite_LockedPet = true,
+		Locked_Pet_Age = 75, -- pet that age > 60 will lock
 		Locked = {
-			"Corrupted Kodama",
+			"French Fry Ferret",
+			"Spaghetti Sloth",
+			"Corrupted Kitsune",
+			"Raiju",
 			"Koi",
+			"Tanuki",
+			"Tanchozuru",
+			"Kappa",
 			"Kitsune",
 			"Dilophosaurus",
 			"Moon Cat",
-			"Seal",
+			"Capybara",
 			"Spinosaurus",
+			"Bear Bee",
 			"T-Rex",
-			"Corrupted Kitsune",
+			"Brontosaurus",
 			"Disco Bee",
 			"Butterfly",
 			"Queen Bee",
@@ -176,19 +186,15 @@ getgenv().ConfigsKaitun = {
 			"Mimic Octopus",
 			"Red Fox",
 			"Blood Owl",
-			["Kodama"] = 7,
 			["Starfish"] = 10,
 		},
-		LockPet_Weight = 7, -- if Weight >= 10 they will locked,
-		Instant_Sell = {		
-			"Shiba Inu",
-		}
+		LockPet_Weight = 7, -- if Weight >= 10 they will locked
 	},
 
 	Webhook = {
 		UrlPet = "https://discord.com/api/webhooks/1398736831641686026/py9uM8qq7bUMjea75mvcxdLtOzhmSMxHf5ZAUyL41jfT4N9H-3H_EQCixFV6cYpEI64a",
-		UrlSeed = "123",
-		PcName = "123",
+		UrlSeed = "xxx",
+		PcName = "hau oi co pet",
 
 		Noti = {
 			Seeds = {
@@ -200,15 +206,20 @@ getgenv().ConfigsKaitun = {
 				"Idk"
 			},
 			Pets = {
+				"French Fry Ferret",
+				"Spaghetti Sloth",
+				"Corrupted Kitsune",
+				"Kitsune",
+				"Spinosaurus",
+				"T-Rex",
 				"Disco Bee",
-			"Corrupted Kitsune",
 				"Butterfly",
 				"Mimic Octopus",
 				"Queen Bee",
-				"Dragonfly",
-				"Kitsune",
-				"Raccoon",
 				"Fennec Fox",
+				"Dragonfly",
+				"Raccoon",
+				"Red Fox",
 			},
 			Pet_Weight_Noti = true,
 		}

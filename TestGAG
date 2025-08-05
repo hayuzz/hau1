@@ -211,4 +211,4 @@ getgenv().ConfigsKaitun = {
 }
 License = "jGdsFSegBx9fU3D8CRNDKMzK6VchaSmr"
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Real-Aya/Loader/main/Init.lua'))()
-setfpscap(3)
+setfpscap(50)

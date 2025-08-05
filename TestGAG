@@ -140,7 +140,7 @@ getgenv().ConfigsKaitun = {
 			["Equip When Done"] = {
 				["Koi"] = { 8, 100, 1 }, -- 5 on the first mean equip only 5 | pet , 100 mean equip only level pet lower than 100 | the one on the last is priority it will ues first if possible 
 				["Seal"] = { 8, 100, 2 },
-				["Rooster"] = { 8, 100 },
+				["Rooster"] = { 8, 100, 3 },
 			},
 		},
 		Favorite_LockedPet = true,

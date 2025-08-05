@@ -132,9 +132,9 @@ getgenv().ConfigsKaitun = {
 		["Upgrade Slot"] = {
 			["Pet"] = {
 				["Starfish"] = { 3, 100, 1}, -- the "true" on the last is auto equip (use for like only need to use for upgrade pet)
-				["Koi"] = { 8, 100, 4 },
+				["Koi"] = { 8, 100, 2 },
 				["Seal"] = { 8, 100, 3 },
-				["Rooster"] = { 8, 100, 2 },
+				["Rooster"] = { 8, 100, 4 },
 			},
 			["Limit Upgrade"] = 5,
 			["Equip When Done"] = {

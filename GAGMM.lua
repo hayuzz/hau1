@@ -36,7 +36,7 @@ getgenv().gagConfig = {
     KEEP_PETS_AGE = {},
 
      -- EQUIP_PETS Priority (Left -> Right)
-    EQUIP_PETS = {"Bald Eagle", ["Koi"] = 7 , ["Seal"] = 2, ["Rooster"] = 2, ["Starfish"] = 2},
+    EQUIP_PETS = {"Bald Eagle", ["Koi"] = 7 , ["Seal"] = 8, ["Rooster"] = 2, ["Starfish"] = 2},
     USE_PETS_FOR_UPGRADE_SLOT = { "Starfish" },
     REMOVE_PET_MAX_UPGRADE = { "Capybara", "Starfish" },  -- Unequip from garden
 
@@ -45,7 +45,7 @@ getgenv().gagConfig = {
 
     PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1398736831641686026/py9uM8qq7bUMjea75mvcxdLtOzhmSMxHf5ZAUyL41jfT4N9H-3H_EQCixFV6cYpEI64a",
     SEED_WEBHOOK_URL = "", 
-    NOTIFY_PETS = {"Spaghetti Sloth", "French Fry Ferret", "Mochi Mouse","Corrupted Kitsune", "Mizuchi", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Dragonfly", "Butterfly", "Mimic Octopus", "T-Rex", "Spinosaurus", "Red Fox"},
+    NOTIFY_PETS = {"French Fry Ferret","Corrupted Kitsune", "Mizuchi", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Dragonfly", "Butterfly", "Mimic Octopus", "T-Rex", "Spinosaurus", "Red Fox"},
     DISCORD_ID = "452715592558968842",
     WEBHOOK_NOTE = "hau1 oi co pet",
     SHOW_WEBHOOK_USERNAME = true,

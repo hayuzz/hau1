@@ -5,6 +5,8 @@ getgenv().gagConfig = {
     -- Event:
     CRAFT_EVENT = { "Anti Bee Egg", "Lightning Rod" },
     BUY_TRAVELING_MERCHANT = { "Bee Egg", "Loquat", "Feijoa", "Pitcher Plant" },
+    CLAIM_FOOD_CONNOISSEUR_REWARD = { "Culinarian Chest", "Gorilla Chef", "Gourmet Egg", "Sunny-Side Chicken", "Pet Shard Aromatic" },
+    FORCE_COOK_MUTATION_ONLY = true,
 
     -- General:
     AUTO_UPDATE_RESTART = true,
@@ -18,25 +20,24 @@ getgenv().gagConfig = {
 
     MAX_PLANTS = 250,
     DESTROY_UNTIL_MIN_PLANTS = 200,
-    DELETE_PLANTS_AFTER_MAX = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Apple" },
-    LIMIT_PLANT_SEED = { ["Strawberry"] = 5, ["Blueberry"] = 5, ["Apple"] = 5, ["Tomato"] = 5, ["Corn"] = 5, ["Bamboo"] = 5, ["Coconut"] = 5, ["Pumpkin"] = 5, ["Watermelon"] = 5, ["Pepper"] = 5 },
+    DELETE_PLANTS_AFTER_MAX = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Grape", "Mango", "Dragon Fruit", "Cactus", "Apple", "Coconut", "Pumpkin", "Watermelon", "Pepper" },
+    LIMIT_PLANT_SEED = { ["Strawberry"] = 2, ["Blueberry"] = 2, ["Apple"] = 2, ["Tomato"] = 2, ["Corn"] = 2, ["Bamboo"] = 2, ["Coconut"] = 5, ["Pumpkin"] = 2, ["Watermelon"] = 2, ["Pepper"] = 2 },
     
     BUY_EGGS = { "Bug Egg", "Bee Egg", "Paradise Egg", "Mythical Egg", "Rare Summer Egg", "Common Summer Egg", "Rare Egg", "Uncommon Egg" },
     PLANT_EGGS = { "Gourmet Egg", "Corrupted Zen Egg", "Zen Egg", "Dinosaur Egg", "Primal Egg", "Anti Bee Egg", "Bee Egg", "Night Egg", "Bug Egg", "Paradise Egg", "Mythical Egg", "Rare Summer Egg","Common Summer Egg", "Rare Egg", "Uncommon Egg" },
     
-    BUY_SEED_SHOP = { "Elder Strawberry", "Giant Pinecone", "Burning Bud", "Sugar Apple", "Ember Lily", "Beanstalk", "Cacao", "Pepper", "Mushroom", "Grape", "Mango", "Dragon Fruit", "Cactus", ["Coconut"] = 50, ["Bamboo"] = 50, ["Apple"] = 50, ["Pumpkin"] = 50, ["Watermelon"] = 50, ["Daffodil"] = 50, ["Tomato"] = 50, ["Orange Tulip"] = 50, ["Blueberry"] = 50, ["Strawberry"] = 50, ["Carrot"] = 50 },
-    KEEP_SEEDS = { "" },
+    BUY_SEED_SHOP = { "Elder Strawberry", "Giant Pinecone", "Burning Bud", "Sugar Apple", "Ember Lily", "Beanstalk", "Cacao", "Pepper", "Grape", "Mango", "Dragon Fruit", "Cactus", ["Coconut"] = 50, ["Bamboo"] = 50, ["Apple"] = 50, ["Pumpkin"] = 50, ["Watermelon"] = 50, ["Daffodil"] = 50, ["Tomato"] = 50, ["Orange Tulip"] = 50, ["Blueberry"] = 50, ["Strawberry"] = 50, ["Carrot"] = 50 },
     KEEP_SEEDS_AFTER_MAX_PLANTS = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Apple" },
     
     FAVOURITE_FRUIT_MUTATIONS = {},  -- Stop Autosell
     SKIP_HARVEST_MUTATIONS = {},  -- Stop Harvest
 
-    KEEP_PETS = { "Spaghetti Sloth", "French Fry Ferret", "Corrupted Kodama", "Corrupted Kitsune", "Raiju", "Mizuchi", "Seal", "Kitsune", "Kappa", "Dilophosaurus", "Bald Eagle", "Ankylosaurus", "Spinosaurus", "Pterodactyl", "Brontosaurus", "T-Rex", "Fennec Fox", "Blood Kiwi", ["Starfish"] = 5, "Rooster", ["Hamster"] = 2, "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Chicken Zombie", ["Capybara"] = 1, ["Dog"] = 1, ["Bunny"] = 1, ["Golden Lab"] = 1 },
-    KEEP_PETS_WEIGHT = {},
+    KEEP_PETS = { "Junkbot", "Gorilla Chef", "Lobster Thermidor", ["Sunny-Side Chicken"] = 6, "Spaghetti Sloth", "French Fry Ferret", "Corrupted Kodama", "Corrupted Kitsune", "Raiju", "Mizuchi", "Seal", "Kitsune", "Kappa", "Dilophosaurus", "Bald Eagle", "Ankylosaurus", "Spinosaurus", "Pterodactyl", "Brontosaurus", "T-Rex", "Fennec Fox", "Blood Kiwi", ["Starfish"] = 5, "Rooster", ["Hamster"] = 2, "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Chicken Zombie", ["Capybara"] = 1, ["Dog"] = 1, ["Bunny"] = 1, ["Golden Lab"] = 1 },
+    KEEP_PETS_WEIGHT = { ["Toucan"] = 5, ["Ostrich"] = 5, ["Capybara"] = 5 },
     KEEP_PETS_AGE = {},
 
      -- EQUIP_PETS Priority (Left -> Right)
-    EQUIP_PETS = {"Bald Eagle", ["Koi"] = 7 , ["Seal"] = 8, ["Rooster"] = 2, ["Starfish"] = 2},
+    EQUIP_PETS = {"Bald Eagle", "Koi" , "Seal" , ["Sunny-Side Chicken"] = 2,  ["Rooster"] = 2, ["Starfish"] = 2},
     USE_PETS_FOR_UPGRADE_SLOT = { "Starfish" },
     REMOVE_PET_MAX_UPGRADE = { "Capybara", "Starfish" },  -- Unequip from garden
 
@@ -45,7 +46,7 @@ getgenv().gagConfig = {
 
     PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1398736831641686026/py9uM8qq7bUMjea75mvcxdLtOzhmSMxHf5ZAUyL41jfT4N9H-3H_EQCixFV6cYpEI64a",
     SEED_WEBHOOK_URL = "", 
-    NOTIFY_PETS = {"French Fry Ferret","Corrupted Kitsune", "Mizuchi", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Dragonfly", "Butterfly", "Mimic Octopus", "T-Rex", "Spinosaurus", "Red Fox"},
+    NOTIFY_PETS = {"Junkbot", "Lobster Thermidor","French Fry Ferret","Corrupted Kitsune", "Mizuchi", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Dragonfly", "Butterfly", "Mimic Octopus", "T-Rex", "Spinosaurus", "Red Fox"},
     DISCORD_ID = "452715592558968842",
     WEBHOOK_NOTE = "hau1 oi co pet",
     SHOW_WEBHOOK_USERNAME = true,

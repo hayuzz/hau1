@@ -5,8 +5,9 @@ getgenv().gagConfig = {
     -- Event:
     CRAFT_EVENT = { "Anti Bee Egg" },
     BUY_TRAVELING_MERCHANT = { "Bee Egg", "Loquat", "Feijoa", "Pitcher Plant" },
-    CLAIM_FOOD_CONNOISSEUR_REWARD = { "Culinarian Chest", "Gorilla Chef", "Gourmet Egg", "Sunny-Side Chicken" },
+    CLAIM_FOOD_CONNOISSEUR_REWARD = { "Culinarian Chest", "Gorilla Chef", "Gourmet Egg", "Sunny-Side Chicken", "Pet Shard Aromatic", "Cooking Cauldron", "Gourmet Seed Pack", "Bitter Melon Seed", "Pricklefruit Seed", "Butternut Squash Seed", "Spring Onion Seed", "Kitchen Crate", "Kitchen Flooring", "Kitchen Cart", "Smoothie Fountain" },
     FORCE_COOK_MUTATION_ONLY = true,
+    PLACE_COSMETIC = {"Pet Shard Aromatic", "Cooking Cauldron"},  -- {"Pet Shard Aromatic", "Cooking Cauldron"}
 
     -- General:
     AUTO_UPDATE_RESTART = true,
@@ -35,6 +36,7 @@ getgenv().gagConfig = {
     KEEP_PETS = { "Junkbot", "Gorilla Chef", "Lobster Thermidor", ["Sunny-Side Chicken"] = 6, "Spaghetti Sloth", "French Fry Ferret", "Corrupted Kodama", "Corrupted Kitsune", "Raiju", "Mizuchi", "Seal", "Kitsune", "Kappa", "Dilophosaurus", "Bald Eagle", "Ankylosaurus", "Spinosaurus", "Pterodactyl", "Brontosaurus", "T-Rex", "Fennec Fox", "Blood Kiwi", ["Starfish"] = 5, "Rooster", ["Hamster"] = 2, "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Chicken Zombie", ["Capybara"] = 1, ["Dog"] = 1, ["Bunny"] = 1, ["Golden Lab"] = 1 },
     KEEP_PETS_WEIGHT = { ["Toucan"] = 5, ["Ostrich"] = 5, ["Capybara"] = 5 },
     KEEP_PETS_AGE = {},
+    KEEP_PETS_WEIGHT = 5,
 
      -- EQUIP_PETS Priority (Left -> Right)
     EQUIP_PETS = {"Bald Eagle", "Gorilla Chef", "Spaghetti Sloth", "Raiju", "Kappa", ["Sunny-Side Chicken"] = 2,  ["Rooster"] = 2, ["Starfish"] = 2},

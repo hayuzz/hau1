@@ -23,7 +23,7 @@ getgenv().gagConfig = {
     FAST_LEVEL_PET = true,
 
     MAX_PLANTS = 350,
-    DESTROY_UNTIL_MIN_PLANTS = 200,
+    DESTROY_UNTIL_MIN_PLANTS = 250,
     DELETE_PLANTS_AFTER_MAX = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Grape", "Mango", "Dragon Fruit", "Apple", "Pumpkin", "Watermelon", "Pepper" },
     LIMIT_PLANT_SEED = { ["Strawberry"] = 2, ["Blueberry"] = 2, ["Apple"] = 2, ["Tomato"] = 2, ["Corn"] = 2, ["Bamboo"] = 2, ["Coconut"] = 5, ["Pumpkin"] = 2, ["Watermelon"] = 2, ["Pepper"] = 2 },
     

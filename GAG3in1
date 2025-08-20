@@ -40,7 +40,7 @@ getgenv().gagConfig = {
     KEEP_PETS_WEIGHT = 5,
 
      -- EQUIP_PETS Priority (Left -> Right)
-    EQUIP_PETS = {"Bald Eagle", "Seal", "Sunny-Side Chicken",  ["Rooster"] = 2, ["Starfish"] = 2},
+    EQUIP_PETS = { "Seal", ["Starfish"] = 2},
     USE_PETS_FOR_UPGRADE_SLOT = { "Starfish" },
     REMOVE_PET_MAX_UPGRADE = { "Capybara", "Starfish" },  -- Unequip from garden
 

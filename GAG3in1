@@ -9,6 +9,7 @@ getgenv().gagConfig = {
     BUY_TRAVELING_MERCHANT = { "Bee Egg", "Loquat", "Feijoa", "Pitcher Plant" },
     MAX_EVENT_RESTOCK_SHECKLES = 9_800_000_000,  -- Restock stop at 9b8
     BUY_EVENT_SHOP = { "Sprout Egg", "Spriggan" },
+    PLANT_EVENT_TREES = true,
     PLACE_COSMETIC = {"Pet Shard Aromatic", "Cooking Cauldron", "Pancake Stack"},  -- {"Pet Shard Aromatic", "Cooking Cauldron"}
 
     -- General:

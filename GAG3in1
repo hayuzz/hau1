@@ -5,10 +5,10 @@ setfpscap(3)
 task.wait(20)
 getgenv().gagConfig = {
     -- Event:
-    CRAFT_EVENT = { "Anti Bee Egg" },
+    CRAFT_EVENT = { "Anti Bee Egg", "Skyroot Chest" },
     BUY_TRAVELING_MERCHANT = { "Bee Egg", "Loquat", "Feijoa", "Pitcher Plant" },
     MAX_EVENT_RESTOCK_SHECKLES = 9_800_000_000,  -- Restock stop at 9b8
-    BUY_EVENT_SHOP = { "Sprout Egg", "Spriggan" },
+    BUY_EVENT_SHOP = { "Sprout Egg", "Spriggan", "Skyroot Chest", "Gnome" },
     PLANT_EVENT_TREES = true,
     PLACE_COSMETIC = {"Pet Shard Aromatic", "Cooking Cauldron", "Pancake Stack"},  -- {"Pet Shard Aromatic", "Cooking Cauldron"}
 
@@ -36,7 +36,7 @@ getgenv().gagConfig = {
     FAVOURITE_FRUIT_MUTATIONS = {},  -- Stop Autosell
     SKIP_HARVEST_MUTATIONS = {},  -- Stop Harvest
 
-    KEEP_PETS = {"Golden Goose", ["Golem"] = 3 , "Spriggan", "Junkbot", "Lobster Thermidor", ["Sunny-Side Chicken"] = 6, "French Fry Ferret", "Corrupted Kodama", "Corrupted Kitsune", "Raiju", "Mizuchi", "Seal", "Kitsune", "Kappa", "Dilophosaurus", "Bald Eagle", "Ankylosaurus", "Spinosaurus", "Pterodactyl", "Brontosaurus", "T-Rex", "Fennec Fox", "Blood Kiwi", ["Starfish"] = 5, "Rooster", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Chicken Zombie", ["Capybara"] = 1 },
+    KEEP_PETS = {"Griffin", "Peach Wasp", "Green Bean", "Chicken Zombie", "Apple Gazelle", "Lemon Lion","Golden Goose", ["Golem"] = 3 , "Spriggan", "Junkbot", "Lobster Thermidor", ["Sunny-Side Chicken"] = 6, "French Fry Ferret", "Corrupted Kodama", "Corrupted Kitsune", "Raiju", "Mizuchi", "Seal", "Kitsune", "Kappa", "Dilophosaurus", "Bald Eagle", "Ankylosaurus", "Spinosaurus", "Pterodactyl", "Brontosaurus", "T-Rex", "Fennec Fox", "Blood Kiwi", ["Starfish"] = 5, "Rooster", "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Chicken Zombie", ["Capybara"] = 1 },
     KEEP_PETS_AGE = 75,
     KEEP_PETS_WEIGHT = 5,
 
@@ -50,7 +50,7 @@ getgenv().gagConfig = {
 
     PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1398736831641686026/py9uM8qq7bUMjea75mvcxdLtOzhmSMxHf5ZAUyL41jfT4N9H-3H_EQCixFV6cYpEI64a",
     SEED_WEBHOOK_URL = "", 
-    NOTIFY_PETS = {"Golden Goose", "Lobster Thermidor","French Fry Ferret","Corrupted Kitsune", "Mizuchi", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Dragonfly", "Butterfly", "Mimic Octopus", "T-Rex", "Spinosaurus",},
+    NOTIFY_PETS = {"Griffin", "Golden Goose", "Lobster Thermidor","French Fry Ferret","Corrupted Kitsune", "Mizuchi", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Dragonfly", "Butterfly", "Mimic Octopus", "T-Rex", "Spinosaurus",},
     DISCORD_ID = "505748891623489542",
     WEBHOOK_NOTE = "hau1 oi co pet",
     SHOW_WEBHOOK_USERNAME = true,

@@ -35,14 +35,14 @@ getgenv().gagConfig = {
     FAVOURITE_FRUIT_MUTATIONS = {},  -- Stop Autosell
     SKIP_HARVEST_MUTATIONS = {},  -- Stop Harvest
 
-    KEEP_PETS = { "Cockatrice", "Glimmering Sprite" ,"Griffin", ["Orange Tabby"] = 1, "Gnome", "Peach Wasp", "Green Bean", "Chicken Zombie", "Apple Gazelle", "Lemon Lion","Golden Goose", "Junkbot", "Lobster Thermidor", ["Sunny-Side Chicken"] = 6, "French Fry Ferret", "Corrupted Kodama", "Corrupted Kitsune", "Raiju", "Mizuchi", "Seal", "Kitsune", "Kappa", "Dilophosaurus", "Bald Eagle", "Ankylosaurus", "Spinosaurus", "Pterodactyl", "Brontosaurus", "T-Rex", "Fennec Fox", "Blood Kiwi", ["Starfish"] = 5, ["Rooster"] = 6, "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Chicken Zombie", ["Capybara"] = 1 },
+    KEEP_PETS = { "Cockatrice", "Glimmering Sprite" ,"Griffin", ["Orange Tabby"] = 1, "Gnome", "Peach Wasp", "Green Bean", "Chicken Zombie", "Apple Gazelle", "Lemon Lion","Golden Goose", "Junkbot", "Lobster Thermidor", ["Sunny-Side Chicken"] = 6, "French Fry Ferret", "Corrupted Kodama", "Corrupted Kitsune", "Raiju", "Mizuchi", "Seal", "Kitsune", "Kappa", "Dilophosaurus", "Bald Eagle", "Ankylosaurus", "Spinosaurus", "Pterodactyl", "Brontosaurus", "T-Rex", "Fennec Fox", "Blood Kiwi", ["Starfish"] = 5, ["Rooster"] = 6, ["Chicken"] = 6, "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", "Chicken Zombie", ["Capybara"] = 1 },
     KEEP_PETS_AGE = 75,
     KEEP_PETS_WEIGHT = 5,
 
      -- EQUIP_PETS Priority (Left -> Right)
     EQUIP_PETS = { "Glimmering Sprite" , "Seal", "Chicken Zombie", "Rooster", "Sunny-Side Chicken", "Chicken"  },
-    USE_PETS_FOR_UPGRADE_SLOT = { "Rooster", "Chicken" },
-    REMOVE_PET_MAX_UPGRADE = { "Capybara", "Rooster", "Chicken"  },  -- Unequip from garden
+    USE_PETS_FOR_UPGRADE_SLOT = { "Rooster", "Chicken", "Starfish" },
+    REMOVE_PET_MAX_UPGRADE = { "Capybara", "Rooster", "Chicken", "Starfish"  },  -- Unequip from garden
 
     BUY_GEAR_SHOP = {"Grandmaster Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },
     USE_SPRINKLER = {"Grandmaster Sprinkler", "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler" },

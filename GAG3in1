@@ -41,8 +41,8 @@ getgenv().gagConfig = {
     SELL_PETS_WEIGHT = { "Bunny", "Bagel Bunny", "Black Bunny", "Cat", "Dog", "Golden Lab", "Jackalope", "Ladybug"},
 
      -- EQUIP_PETS Priority (Left -> Right)
-    EQUIP_PETS = { "Glimmering Sprite" , "Seal", "Chicken Zombie", "Rooster", "Sunny-Side Chicken", "Chicken"  },
-    USE_PETS_FOR_UPGRADE_SLOT = { "Rooster", "Chicken", "Starfish" },
+    EQUIP_PETS = { "Glimmering Sprite" , "Seal", "Chicken Zombie", "Rooster", "Starfish" , "Sunny-Side Chicken", "Chicken" },
+    USE_PETS_FOR_UPGRADE_SLOT = {"Chicken", "Starfish" },
     REMOVE_PET_MAX_UPGRADE = { "Capybara", "Rooster", "Chicken", "Starfish"  },  -- Unequip from garden
 
     BUY_GEAR_SHOP = {"Grandmaster Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" },

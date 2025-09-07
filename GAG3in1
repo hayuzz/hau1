@@ -41,7 +41,7 @@ getgenv().gagConfig = {
     KEEP_PETS = { "Phoenix" ,"Luminous Sprite",  "Drake",  "Wisp", "Cockatrice", ["Glimmering Sprite"] = 8 ,"Griffin", "Gnome", "Peach Wasp", "Green Bean", "Chicken Zombie", "Apple Gazelle", "Lemon Lion","Golden Goose", "Junkbot", "Lobster Thermidor", ["Sunny-Side Chicken"] = 6, "French Fry Ferret", "Corrupted Kodama", "Corrupted Kitsune", "Raiju", "Mizuchi", "Seal", "Kitsune", "Kappa", "Dilophosaurus", "Bald Eagle", "Ankylosaurus", "Spinosaurus", "Pterodactyl", "Brontosaurus", "T-Rex", "Fennec Fox", "Blood Kiwi", ["Starfish"] = 5, ["Rooster"] = 6, ["Chicken"] = 6, "Disco Bee", "Raccoon", "Queen Bee", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox", ["Capybara"] = 1 },
     KEEP_PETS_AGE = 75,
     KEEP_PETS_WEIGHT = 5,
-    SELL_PETS_WEIGHT = { "Bunny", "Bagel Bunny", "Black Bunny", "Cat", "Dog", "Golden Lab", "Jackalope", "Ladybug"},
+    SELL_PETS_WEIGHT = { "Bunny", "Bagel Bunny", "Black Bunny", "Cat", "Dog", "Golden Lab", "Jackalope", "Ladybug", "Kappa"},
 
      -- EQUIP_PETS Priority (Left -> Right)
     EQUIP_PETS = { "Glimmering Sprite" , "Seal", "Chicken Zombie", "Rooster", "Starfish" , "Sunny-Side Chicken", "Chicken" },

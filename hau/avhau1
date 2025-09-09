@@ -7,6 +7,7 @@ for i = 1, 6 do
 end
 
 print("✅ Đã mua đủ 6 lần.")
+
 getgenv().Config = {
 	["Auto Join Equipper"] = {
 		["Macro Equipper"] = {

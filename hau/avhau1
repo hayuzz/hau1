@@ -1,13 +1,3 @@
-local buyEvent = game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitExpansionEvent")
-
-for i = 1, 6 do
-    buyEvent:FireServer("Purchase")
-    print("Đã mua slot lần", i)
-    task.wait(1) -- nghỉ 1 giây cho chắc, tránh spam quá nhanh
-end
-
-print("✅ Đã mua đủ 6 lần.")
-
 getgenv().Config = {
 	["Auto Join Equipper"] = {
 		["Macro Equipper"] = {
@@ -24,9 +14,9 @@ getgenv().Config = {
 		["Auto Join"] = false
 	},
 	["Stage Joiner"] = {
+		["Nightmare Mode"] = false,
 		["Auto Join"] = false,
 		["Join Highest"] = false,
-		["Nightmare Mode"] = false,
 		["Join Lowest Clear"] = false
 	},
 	["Macros"] = {
@@ -43,11 +33,11 @@ getgenv().Config = {
 	},
 	["Webhook"] = {
 		["Match Restarted"] = true,
-		["Mention"] = "282859044593598464",
+		["Unit Summoned"] = true,
 		["Trait Rerolled"] = false,
 		["URL"] = "https://discord.com/api/webhooks/1021454348938645594/BGXjYBuGfCefcuwJ5WZqsALBMuQbwL0RWEQGwPr6ATBx-Pg7PUidAMDh6mo_TBevu8GP",
-		["Unit Summoned"] = true,
 		["Stage Finished"] = true,
+		["Mention"] = "282859044593598464",
 		["Stat Potential Rerolled"] = false,
 		["Unit Stat Potential"] = true
 	},
@@ -92,8 +82,8 @@ getgenv().Config = {
 			["Exploding"] = false,
 			["Dodge"] = false,
 			["Quake"] = false,
-			["Shielded"] = false,
 			["Immunity"] = false,
+			["Shielded"] = false,
 			["Champions"] = false
 		},
 		["Auto Next"] = false,
@@ -109,8 +99,8 @@ getgenv().Config = {
 				["Exploding"] = false,
 				["Dodge"] = false,
 				["Quake"] = false,
-				["Shielded"] = false,
 				["Immunity"] = false,
+				["Shielded"] = false,
 				["Champions"] = false
 			}
 		}
@@ -295,8 +285,8 @@ getgenv().Config = {
 		["Auto Open Gift Boxes"] = false,
 		["Right Click Move"] = false,
 		["Max Camera Zoom"] = 40,
+		["Redeem Code"] = false,
 		["Right Click Teleport"] = false,
-		["Redeem Code"] = true,
 		["Auto Delete Portal"] = {
 			["Enable"] = false,
 			["Summer Portal"] = 500,
@@ -457,21 +447,21 @@ getgenv().Config = {
 		}
 	},
 	["Auto Join Setting"] = {
-		["Joiner Cooldown"] = 0,
+		["Joiner Cooldown"] = 30,
 		["Joiner Priority"] = {
 			["Legend Stage Joiner"] = 2,
 			["Spring Portal Joiner"] = 9,
-			["Limitless Odyssey Joiner"] = 8,
-			["Dungeon Joiner"] = 4,
+			["Worldline Joiner"] = 6,
+			["Odyssey Joiner"] = 7,
 			["Boss Event Joiner"] = 5,
 			["Summer Portal Joiner"] = 11,
-			["Boss Bounties Joiner"] = 12,
-			["Odyssey Joiner"] = 7,
+			["Limitless Odyssey Joiner"] = 8,
+			["Dungeon Joiner"] = 4,
 			["Weekly Challenge Joiner"] = 15,
 			["Raid Joiner"] = 3,
-			["Worldline Joiner"] = 6,
-			["Regular Challenge Joiner"] = 13,
 			["Stage Joiner"] = 1,
+			["Regular Challenge Joiner"] = 13,
+			["Boss Bounties Joiner"] = 12,
 			["Summer Event Joiner"] = 10,
 			["Daily Challenge Joiner"] = 14,
 			["Rift Joiner"] = 16
@@ -547,15 +537,13 @@ getgenv().Config = {
 			["6"] = 6
 		}
 	},
-	["Weekly Challenge Joiner"] = {
-		["Auto Join"] = false
+	["Unit Feeder"] = {
+		["Auto Feed"] = false,
+		["Feed Level"] = 60
 	},
 	["Secure"] = {
 		["Random Offset"] = true,
 		["Walk Around"] = true
-	},
-	["Boss Bounties Joiner"] = {
-		["Auto Join"] = false
 	},
 	["Limitless Odyssey Joiner"] = {
 		["Auto Force Skip Wave"] = false,
@@ -564,9 +552,11 @@ getgenv().Config = {
 		["Intensity"] = 25,
 		["Leave Floor"] = 1
 	},
-	["Unit Feeder"] = {
-		["Auto Feed"] = false,
-		["Feed Level"] = 60
+	["Boss Bounties Joiner"] = {
+		["Auto Join"] = false
+	},
+	["Weekly Challenge Joiner"] = {
+		["Auto Join"] = false
 	},
 	["Legend Stage Joiner"] = {
 		["Auto Join"] = false
@@ -584,8 +574,8 @@ getgenv().Config = {
 			["Exploding"] = false,
 			["Dodge"] = false,
 			["Quake"] = false,
-			["Shielded"] = false,
 			["Immunity"] = false,
+			["Shielded"] = false,
 			["Champions"] = false
 		},
 		["Teleport Lobby full Iced Box"] = false,
@@ -620,8 +610,8 @@ getgenv().Config = {
 				["Exploding"] = false,
 				["Dodge"] = false,
 				["Quake"] = false,
-				["Shielded"] = false,
 				["Immunity"] = false,
+				["Shielded"] = false,
 				["Champions"] = false
 			},
 			["Prioritize"] = {
@@ -638,3 +628,10 @@ getgenv().Config = {
 }
 getgenv().Key = "k7470b40a44cfd650216a40a"
 repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(20)until getgenv().Joebiden
+local buyEvent = game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitExpansionEvent")
+for i = 1, 6 do
+    buyEvent:FireServer("Purchase")
+    print("Đã mua slot lần", i)
+    task.wait(1) -- nghỉ 1 giây cho chắc, tránh spam quá nhanh
+end
+print("✅ Đã mua đủ 6 lần.")

@@ -1,13 +1,3 @@
-local buyEvent = game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitExpansionEvent")
-
-for i = 1, 6 do
-    buyEvent:FireServer("Purchase")
-    print("Đã mua slot lần", i)
-    task.wait(1) -- nghỉ 1 giây cho chắc, tránh spam quá nhanh
-end
-
-print("✅ Đã mua đủ 6 lần.")
-
 getgenv().Config = {
 	["Auto Join Equipper"] = {
 		["Macro Equipper"] = {

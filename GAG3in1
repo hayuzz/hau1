@@ -48,7 +48,7 @@ getgenv().gagConfig = {
     USE_PETS_FOR_UPGRADE_SLOT = {"Chicken", "Starfish" },
     REMOVE_PET_MAX_UPGRADE = { "Capybara", "Rooster", "Chicken", "Starfish"  },  -- Unequip from garden
 
-    BUY_GEAR_SHOP = {"Grandmaster Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" , "Trading Ticket", ["Harvest Tool"] = 10},
+    BUY_GEAR_SHOP = {"Grandmaster Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler", "Basic Sprinkler" , ["Trading Ticket"] = 10, ["Harvest Tool"] = 10},
     USE_SPRINKLER = {"Grandmaster Sprinkler", "Basic Sprinkler", "Master Sprinkler", "Godly Sprinkler", "Advanced Sprinkler" },
 
     PET_WEBHOOK_URL = "https://discord.com/api/webhooks/1398736831641686026/py9uM8qq7bUMjea75mvcxdLtOzhmSMxHf5ZAUyL41jfT4N9H-3H_EQCixFV6cYpEI64a",

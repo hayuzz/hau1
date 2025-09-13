@@ -5,9 +5,12 @@ setfpscap(3)
 task.wait(20)
 getgenv().gagConfig = {
     -- Event:
-    CRAFT_EVENT = { "Fairy Net", "Enchanted Chest", "Anti Bee Egg", "Mutation Spray Glimmering" },
     BUY_TRAVELING_MERCHANT = { "Bee Egg", "Paradise Egg", "Common Summer Egg", "Rare Summer Egg", "Loquat", "Feijoa", "Pitcher Plant" },
-    BUY_EVENT_SHOP = {"Enchanted Chest", "Luminous Sprite", "Drake" },
+    BUY_EVENT_SHOP = { "Marmot", "Fall Egg", "Golden Acorn", "Sugar Glider", "Space Squirrel" },
+
+    PLANT_EVENT_TREES = true,  -- This config will replace most plant related config
+    PLACE_COSMETIC = { "Cooking Kit" },
+    BUY_COSMETIC_SHOP = { ["Cooking Kit"] = 3 },
     MAX_EVENT_RESTOCK_SHECKLES = 480000001,
 
     CLAIM_FAIRY_REWARD = { "Enchanted Egg", "FairyPoints", "Mutation Spray Glimmering", "Enchanted Seed Pack" },
@@ -29,8 +32,8 @@ getgenv().gagConfig = {
     DELETE_PLANTS_AFTER_MAX = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Grape", "Mango", "Dragon Fruit", "Apple", "Pumpkin", "Watermelon", "Pepper" },
     LIMIT_PLANT_SEED = { ["Strawberry"] = 2, ["Blueberry"] = 2, ["Apple"] = 2, ["Tomato"] = 2, ["Corn"] = 2, ["Bamboo"] = 2, ["Coconut"] = 5, ["Pumpkin"] = 2, ["Watermelon"] = 2, ["Pepper"] = 2 },
     
-    BUY_EGGS = { "Fall Egg", "Bug Egg", "Bee Egg", "Paradise Egg", "Mythical Egg", "Rare Summer Egg", "Common Summer Egg", "Rare Egg", "Legendary Egg", "Uncommon Egg" },
-    PLANT_EGGS = { "Anti Bee Egg",  "Bug Egg",  "Rare Egg", "Enchanted Egg", "Sprout Egg", "Gourmet Egg", "Corrupted Zen Egg", "Zen Egg", "Dinosaur Egg", "Primal Egg", "Night Egg", "Paradise Egg", "Mythical Egg", "Rare Summer Egg","Common Summer Egg", "Legendary Egg",  "Uncommon Egg", "Common Egg" },
+    BUY_EGGS = { "Bug Egg", "Bee Egg", "Paradise Egg", "Mythical Egg", "Rare Summer Egg", "Common Summer Egg", "Rare Egg", "Legendary Egg", "Uncommon Egg" },
+    PLANT_EGGS = {  "Fall Egg", "Anti Bee Egg",  "Bug Egg",  "Rare Egg", "Enchanted Egg", "Sprout Egg", "Gourmet Egg", "Corrupted Zen Egg", "Zen Egg", "Dinosaur Egg", "Primal Egg", "Night Egg", "Paradise Egg", "Mythical Egg", "Rare Summer Egg","Common Summer Egg", "Legendary Egg",  "Uncommon Egg", "Common Egg" },
     
     BUY_SEED_SHOP = { "Romanesco", "Elder Strawberry", "Giant Pinecone", "Burning Bud", "Sugar Apple", "Ember Lily", "Beanstalk", "Cacao", "Pepper", "Grape", "Mango", "Dragon Fruit", "Cactus", ["Coconut"] = 50, ["Bamboo"] = 50, ["Apple"] = 50, ["Pumpkin"] = 50, ["Watermelon"] = 50, ["Daffodil"] = 50, ["Tomato"] = 50, ["Orange Tulip"] = 50, ["Blueberry"] = 50, ["Strawberry"] = 50, ["Carrot"] = 50 },
     KEEP_SEEDS_AFTER_MAX_PLANTS = { "Carrot", "Strawberry", "Blueberry", "Tomato", "Apple" },
@@ -44,7 +47,7 @@ getgenv().gagConfig = {
     SELL_PETS_WEIGHT = { "Bunny", "Bagel Bunny", "Black Bunny", "Cat", "Dog", "Golden Lab", "Jackalope", "Ladybug", "Kappa"},
 
      -- EQUIP_PETS Priority (Left -> Right)
-    EQUIP_PETS = { "Glimmering Sprite" , "Seal", "Chicken Zombie", "Rooster", "Starfish" , "Sunny-Side Chicken", "Chicken" },
+    EQUIP_PETS = {"Seal", "Chicken Zombie", "Rooster", "Starfish" , "Sunny-Side Chicken", "Chicken" },
     USE_PETS_FOR_UPGRADE_SLOT = {"Chicken", "Starfish" },
     REMOVE_PET_MAX_UPGRADE = { "Capybara", "Rooster", "Chicken", "Starfish"  },  -- Unequip from garden
 

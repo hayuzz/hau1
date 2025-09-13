@@ -47,7 +47,7 @@ getgenv().gagConfig = {
     SELL_PETS_WEIGHT = { "Bunny", "Bagel Bunny", "Black Bunny", "Cat", "Dog", "Golden Lab", "Jackalope", "Ladybug", "Kappa"},
 
      -- EQUIP_PETS Priority (Left -> Right)
-    EQUIP_PETS = {"Seal", "Chicken Zombie", "Rooster", "Starfish" , "Sunny-Side Chicken", "Chicken" },
+    EQUIP_PETS = {"Chicken Zombie", "Rooster", "Sunny-Side Chicken", "Chicken", "Seal",  "Starfish"  },
     USE_PETS_FOR_UPGRADE_SLOT = {"Chicken", "Starfish" },
     REMOVE_PET_MAX_UPGRADE = { "Capybara", "Rooster", "Chicken", "Starfish"  },  -- Unequip from garden
 

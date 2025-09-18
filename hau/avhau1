@@ -246,7 +246,7 @@ getgenv().Config = {
 			["Use Talisman on Crab"] = false
 		},
 		["Auto Restart"] = {
-			["Enable"] = false,
+			["Enable"] = true,
 			["Wave"] = 10,
 			["Stage Type"] = {
 				["Odyssey"] = true,
@@ -386,7 +386,7 @@ getgenv().Config = {
 		["Auto Next"] = false,
 		["Replay Amount"] = 0,
 		["Return Lobby Failsafe"] = false,
-		["Auto Replay"] = false
+		["Auto Replay"] = true
 	},
 	["Crafter"] = {
 		["Enable"] = false,

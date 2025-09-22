@@ -643,10 +643,3 @@ getgenv().Config = {
 }
 getgenv().Key = "k7470b40a44cfd650216a40a"
 repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(20)until getgenv().Joebiden
-local buyEvent = game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitExpansionEvent")
-for i = 1, 6 do
-    buyEvent:FireServer("Purchase")
-    print("Đã mua slot lần", i)
-    task.wait(1) -- nghỉ 1 giây cho chắc, tránh spam quá nhanh
-end
-print("✅ Đã mua đủ 6 lần.")

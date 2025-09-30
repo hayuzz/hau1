@@ -1,5 +1,5 @@
 _G.Config = { UserID = "03827c81-7dd0-41f8-86f0-ada91f7f3df7", discord_id = "505748891623489542" , Note = "Pc", } 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/yummytrack/main/tracker"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/unfazedfree/refs/heads/main/sab"))()
 getgenv().Key = "k0d8111e7258c30f41e19014"
 getgenv().Config = {
     ["Gameplay"] = {

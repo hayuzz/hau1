@@ -2,7 +2,7 @@ _G.Config = { UserID = "03827c81-7dd0-41f8-86f0-ada91f7f3df7", discord_id = "505
 loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/yummytrack/main/tracker"))()
 getgenv().Config = {
     ["Gameplay"] = {
-        ["Server Type"] = "Private",
+        ["Server Type"] = "Private (Free)",
 
         -- Private Server config
         ["Collect Cash Cap"] = "50B",
@@ -43,7 +43,7 @@ getgenv().Config = {
 
     ["Webhook"] = {
         ["Enable"] = true,
-        ["Url"] = "https://discord.com/api/webhooks/1422494633254064176/HiQAvUNoQHAPPo6QWaO3MnF1dE4htZT36r-0yzbFr-NQVIzG3_ljjPogN7KKX3F3y0ZD",
+        ["Url"] = "https://discord.com/api/webhooks/1410304996024520765/voovk03Ew7X2DXw35Lv3jK6VbukCUVsgZgxvW7HQG_sNqBgYT1VCNxdlczaS9IZRou-s",
         ["Ignore Notify"] = {},
     }
 }
@@ -63,4 +63,4 @@ repeat
         loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()
     end)
     wait(20)
-until getgenv().Joebiden    
+until getgenv().Joebiden

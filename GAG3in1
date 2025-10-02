@@ -1,6 +1,4 @@
-while task.wait(10) do
-    setfpscap(11)
-end
+setfpscap(11)
 spawn(function()
     _G.Config = { 
         UserID = "03827c81-7dd0-41f8-86f0-ada91f7f3df7",
@@ -73,3 +71,6 @@ repeat
     end)
     wait(20)
 until getgenv().Joebiden
+while task.wait(1) do
+    setfpscap(10)
+end

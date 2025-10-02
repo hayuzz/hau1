@@ -1,4 +1,4 @@
-while task.wait(1) do
+while task.wait(10) do
     setfpscap(11)
 end
 spawn(function()

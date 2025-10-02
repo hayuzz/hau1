@@ -1,3 +1,4 @@
+setfpscap(11)
 spawn(function()
     _G.Config = { 
         UserID = "03827c81-7dd0-41f8-86f0-ada91f7f3df7",

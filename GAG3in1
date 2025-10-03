@@ -24,7 +24,7 @@ getgenv().Config = {
     },
 
     ["Misc"] = {
-        ["Kick if Ping above"] = 750,
+        ["Kick if Ping above"] = 1750,
         ["Kick if FPS below"] = 3,
 
         ["Ignore Secret"] = {

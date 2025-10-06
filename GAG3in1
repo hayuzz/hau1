@@ -40,6 +40,9 @@ getgenv().Config = {
             ["La Cucaracha"] = { "All" },
             ["Job Job Job Sahur"] = { "All" },
         },
+        ["Open Lucky Block"] = {
+            "Admin Lucky Block",
+        },
 
         ["Buy Lucky Block"] = {
             "Los Lucky Blocks",

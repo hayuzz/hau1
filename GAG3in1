@@ -44,6 +44,7 @@ getgenv().Config = {
         ["Buy Lucky Block"] = {
             "Los Lucky Blocks",
             "Secret Lucky Block",
+            "Admin Lucky Block",
         },
     },
 

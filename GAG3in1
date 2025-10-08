@@ -59,7 +59,7 @@ getgenv().Config = {
 
     ["Webhook"] = {
         ["Enable"] = true,
-        ["Url"] = "https://discord.com/api/webhooks/1422494633254064176/HiQAvUNoQHAPPo6QWaO3MnF1dE4htZT36r-0yzbFr-NQVIzG3_ljjPogN7KKX3F3y0ZD",
+        ["Url"] = "https://discord.com/api/webhooks/1422494635833692183/iRGh8Pq47bPjV6bYOvz_79JTAusevFAg5yjsiBdzo8PxgmDS4xKZ-2AteXzRgdGXxMPb",
         ["Ignore Notify"] = {},
     }
 }

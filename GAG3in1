@@ -10,73 +10,33 @@ spawn(function()
         Note = "Pc", } 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/yummytrack/main/tracker"))()
 end)
-getgenv().Key = "k0d8111e7258c30f41e19014"
+getgenv().Key = "k7470b40a44cfd650216a40a"
 getgenv().Config = {
-    ["Gameplay"] = {
-        ["Server Type"] = "Private (Free)",
-
-        -- Private Server config
-        ["Collect Cash Cap"] = "50B",
-
-        -- Public Server config
-        ["Max Auctioning Multiplier"] = 10,
-        ["Lock Base Extra Time"] = 5,
-    },
-
-    ["Misc"] = {
-        ["Kick if Ping above"] = 1750,
-        ["Kick if FPS below"] = 3,
-
-        ["Ignore Secret"] = {
-            ["La Vacca Saturno Saturnita"] = { "All" },
-            ["Karkerkar Kurkur"] = { "All" },
-            ["Sammyni Spyderini"] = { "All" },
-            ["Extinct Tralalero"] = { "All" },
-            ["Extinct Matteo"] = { "All" },
-            ["Dul Dul Dul"] = { "All" },
-            ["Chachechi"] = { "All" },
-            ["Los Tralaleritos"] = { "All" },
-            ["Las Tralaleritas"] = { "All" },
-            ["La Cucaracha"] = { "All" },
-            ["Job Job Job Sahur"] = { "All" },
-        },
-        ["Open Lucky Block"] = {
-            "Admin Lucky Block",
-            "Los Lucky Blocks",
-        },
-
-        ["Buy Lucky Block"] = {
-            "Los Lucky Blocks",
-            "Secret Lucky Block",
-            "Admin Lucky Block",
+    ["FPS Cap"] = 20,
+    ["Max Rebirth"] = 0,
+    ["Keep Brainrot"] = {
+        ["Money Per Second"] = "100K",
+        ["Rarity"] = {
+            "Secret",
         },
     },
-
-    ["Performance"] = {
-        ["Boost FPS"] = true,
-        ["Black Screen"] = true,
+    ["Keep Plant"] = {
+        ["Mr Carrot"] = "0",
+        ["Tomatrio"] = "0",
+        ["Shroombino"] = "0",
+        ["Mango"] = "0",
     },
-
+    ["Plant Seed on Event"] = {
+        "Mr Carrot",
+        "Tomatrio",
+        "Shroombino",
+        "Mango",
+    },
     ["Webhook"] = {
-        ["Enable"] = true,
-        ["Url"] = "https://discord.com/api/webhooks/1422494635833692183/iRGh8Pq47bPjV6bYOvz_79JTAusevFAg5yjsiBdzo8PxgmDS4xKZ-2AteXzRgdGXxMPb",
-        ["Ignore Notify"] = {},
-    }
+        ["URL"] = "https://discord.com/api/webhooks/1425440084156747817/YBuYb7vKPdz66abgUH2c_W9vdbPYvoT4IzM_0h3EvBrIavuV4gJv-v0KXEo8cFXL7eQV",
+        ["Notify Brainrot Money Per Second"] = "200K",
+        ["Notify Plant Damage Per Second"] = "100K",
+    },
+    ["Black Screen"] = true,
 }
-
--- Kick if script fails to load
-spawn(function()
-    task.wait(200)
-    if not getgenv().scriptLoaded then
-        game.Players.LocalPlayer:Kick("Script load timeout\nKick to prevent animal gets stolen")
-    end
-end)
-
--- Keep loading until Joebiden flag is set
-repeat
-    wait()
-    spawn(function()
-        loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()
-    end)
-    wait(20)
-until getgenv().Joebiden
+repeat wait()spawn(function()loadstring(game:HttpGet("https://nousigi.com/loader.lua"))()end)wait(20)until getgenv().Joebiden

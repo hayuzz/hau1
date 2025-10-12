@@ -12,7 +12,7 @@ spawn(function()
 end)
 getgenv().Key = "k7470b40a44cfd650216a40a"
 getgenv().Config = {
-    ["FPS Cap"] = 20,
+    ["FPS Cap"] = 10,
     ["Max Rebirth"] = 0,
     ["Keep Brainrot"] = {
         ["Money Per Second"] = "100K",

@@ -3,7 +3,7 @@ spawn(function()
         setfpscap(3)
     end
 end)
-script_key="";
+script_key="DpmzPRsIpykYsnPJkAcIEfGhPWatdDEM";
 setfpscap(3)
 
 getgenv().gagConfig = {

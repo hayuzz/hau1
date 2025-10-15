@@ -52,7 +52,7 @@ getgenv().gagConfig = {
     NOTIFY_PETS = { "Headless Horseman", "Reaper", "Fortune Squirrel", "Chinchilla", "Tiger", "Barn Owl", "Swan", "Marmot", "Space Squirrel", "Sugar Glider", "Phoenix", "Cockatrice", "Gnome", "Griffin", "Golden Goose", "Corrupted Kitsune", "Raiju", "Mizuchi", "Kitsune", "Fennec Fox", "Disco Bee", "Raccoon", "Queen Bee", "Night Owl", "Dragonfly", "Butterfly", "Mimic Octopus", "Red Fox" },
     NOTIFY_PETS_WEIGHT = 5,
     DISCORD_ID = "1010878887967862835",
-    WEBHOOK_NOTE = "https://discord.com/api/webhooks/1398736831641686026/py9uM8qq7bUMjea75mvcxdLtOzhmSMxHf5ZAUyL41jfT4N9H-3H_EQCixFV6cYpEI64a",
+    WEBHOOK_NOTE = "hau1",
     SHOW_WEBHOOK_USERNAME = true,
     SHOW_WEBHOOK_JOBID = true,
 

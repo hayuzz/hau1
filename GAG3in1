@@ -3,6 +3,12 @@ spawn(function()
         setfpscap(3)
     end
 end)
+_G.Config = {
+    UserID = "8cb251ac-a66a-4360-9145-7a8ff04814a3",
+    discord_id = "452715592558968842" ,
+    Note = "Pc", 
+}
+loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/yummytrack/main/tracker"))()
 script_key="DpmzPRsIpykYsnPJkAcIEfGhPWatdDEM";
 setfpscap(3)
 

@@ -13,7 +13,7 @@ end)
 getgenv().Key = "k0d8111e7258c30f41e19014"
 getgenv().Config = {
     ["Gameplay"] = {
-        ["Server Type"] = "Private (Free)",
+        ["Server Type"] = "Private",
 
         -- Private Server config
         ["Collect Cash Cap"] = "50B",

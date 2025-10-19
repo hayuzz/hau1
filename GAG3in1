@@ -25,12 +25,14 @@ getgenv().Config = {
         ["Tomatrio"] = "0",
         ["Shroombino"] = "0",
         ["Mango"] = "0",
+        ["King Limone"] = "0",
     },
     ["Plant Seed on Event"] = {
         "Mr Carrot",
         "Tomatrio",
         "Shroombino",
         "Mango",
+        "King Limone",
     },
     ["Webhook"] = {
         ["URL"] = "https://discord.com/api/webhooks/1425440084156747817/YBuYb7vKPdz66abgUH2c_W9vdbPYvoT4IzM_0h3EvBrIavuV4gJv-v0KXEo8cFXL7eQV",

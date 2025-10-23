@@ -21,14 +21,12 @@ getgenv().Config = {
         },
     },
     ["Keep Plant"] = {
-        ["Mr Carrot"] = "0",
         ["Tomatrio"] = "0",
         ["Shroombino"] = "0",
         ["Mango"] = "0",
         ["King Limone"] = "0",
     },
     ["Plant Seed on Event"] = {
-        "Mr Carrot",
         "Tomatrio",
         "Shroombino",
         "Mango",

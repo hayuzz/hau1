@@ -1,6 +1,6 @@
 spawn(function()
     while task.wait(1) do
-        setfpscap(15)
+        setfpscap(10)
     end
 end)
 spawn(function()
@@ -59,7 +59,7 @@ getgenv().Config = {
 
     ["Performance"] = {
         ["Boost FPS"] = true,
-        ["Black Screen"] = true,
+        ["Black Screen"] = false,
     },
 
     ["Webhook"] = {

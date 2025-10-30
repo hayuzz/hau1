@@ -13,7 +13,7 @@ end)
 getgenv().Key = "k7470b40a44cfd650216a40a"
 getgenv().Config = {
     ["Gameplay"] = {
-        ["Server Type"] = "Private",
+        ["Server Type"] = "Private (Clone)",
 
         -- Private Server config
         ["Collect Cash Cap"] = "50B",
@@ -26,6 +26,7 @@ getgenv().Config = {
     ["Misc"] = {
         ["Kick if Ping above"] = 1750,
         ["Kick if FPS below"] = 3,
+        ["Max Rebirth"] = 9,
 
         ["Ignore Secret"] = {
             ["La Vacca Saturno Saturnita"] = { "All" },
@@ -48,6 +49,7 @@ getgenv().Config = {
         ["Open Lucky Block"] = {
             "Admin Lucky Block",
             "Los Lucky Blocks",
+            "Spooky Lucky Blocks",
         },
 
         ["Buy Lucky Block"] = {

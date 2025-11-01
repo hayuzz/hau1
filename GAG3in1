@@ -47,8 +47,6 @@ getgenv().Config = {
         },
         ["Open Lucky Block"] = {
             "Admin Lucky Block",
-            "Spooky Lucky Block",
-            "Spooky Lucky Blocks",
         },
 
         ["Buy Lucky Block"] = {

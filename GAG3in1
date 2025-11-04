@@ -1,6 +1,6 @@
 spawn(function()
     while task.wait(1) do
-        setfpscap(8)
+        setfpscap(6)
     end
 end)
 spawn(function()

@@ -65,7 +65,7 @@ getgenv().Config = {
 
     ["Webhook"] = {
         ["Enable"] = true,
-        ["Url"] = "https://discord.com/api/webhooks/1422494635833692183/iRGh8Pq47bPjV6bYOvz_79JTAusevFAg5yjsiBdzo8PxgmDS4xKZ-2AteXzRgdGXxMPb",
+        ["Url"] = "https://discord.com/api/webhooks/1437478471642251325/RTkL5rem4Q48h072n6uW8zTaYoWDtl57g5F8a7PJ8cmWsXUbK9gAgvDu35Co6QNW-UaN",
         ["Ignore Notify"] = {},
     }
 }
@@ -96,8 +96,8 @@ spawn(function()
 
     -- Cấu hình
     local CHECK_INTERVAL = 1     -- Kiểm tra countdown mỗi giây
-    local START_SPAM_TIME = 2    -- Khi còn <= 2 giây thì spam
-    local SPAM_DURATION = 5      -- Spam liên tục 5 giây
+    local START_SPAM_TIME = 5    -- Khi còn <= 2 giây thì spam
+    local SPAM_DURATION = 10      -- Spam liên tục 5 giây
     local MERCHANT_ID = "2298b248-44dd-4a34-bbfe-e1174e8ae1b4"
 
     -- 🕒 Hàm lấy số giây còn lại trong countdown

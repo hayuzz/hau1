@@ -86,3 +86,56 @@ repeat
     end)
     wait(20)
 until getgenv().Joebiden
+spawn(function()
+    -- ⚙️ Setup
+    local ReplicatedStorage = game:GetService("ReplicatedStorage")
+    local Merchant = workspace:WaitForChild("Merchant")
+    local MerchantData = require(ReplicatedStorage.Datas.MerchantData)
+    local BuyRemote = ReplicatedStorage.Packages.Net:FindFirstChild("RF/MerchantService/Buy")
+    local CountdownLabel = Merchant.Overhead.BillboardGui.Countdown
+
+    -- Cấu hình
+    local CHECK_INTERVAL = 1     -- Kiểm tra countdown mỗi giây
+    local START_SPAM_TIME = 2    -- Khi còn <= 2 giây thì spam
+    local SPAM_DURATION = 5      -- Spam liên tục 5 giây
+    local MERCHANT_ID = "2298b248-44dd-4a34-bbfe-e1174e8ae1b4"
+
+    -- 🕒 Hàm lấy số giây còn lại trong countdown
+    local function getRestockSeconds()
+        if not CountdownLabel or not CountdownLabel.Text then return 9999 end
+        local text = CountdownLabel.Text
+        local m, s = text:match("Restocking in (%d+)m (%d+)s")
+        if m and s then return tonumber(m)*60 + tonumber(s) end
+        local sec = text:match("Restocking in (%d+)s")
+        if sec then return tonumber(sec) end
+        return 0
+    end
+
+    -- 🔁 Loop chính: check thời gian & spam khi cần
+    while task.wait(CHECK_INTERVAL) do
+        local remaining = getRestockSeconds()
+
+        if remaining <= START_SPAM_TIME then
+            print(string.format("[⚡] Restock còn %.1fs → bắt đầu spam 5s Secret+!", remaining))
+            local t0 = tick()
+
+            repeat
+                -- Đây chính là đoạn bạn yêu cầu chèn vào
+                for i, v in MerchantData.Brainrots do
+                    if i >= 7 then -- Secret trở lên
+                        task.spawn(function()
+                            pcall(function()
+                                BuyRemote:InvokeServer(MERCHANT_ID, i)
+                            end)
+                        end)
+                    end
+                end
+                task.wait()
+            until tick() - t0 > SPAM_DURATION
+
+            print("[⏹️] Dừng spam (đã hết 5s auto-buy)")
+        else
+            print(string.format("[⌛] Còn %.1fs mới restock", remaining))
+        end
+    end
+end)

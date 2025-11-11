@@ -120,7 +120,6 @@ spawn(function()
             local t0 = tick()
 
             repeat
-                -- Đây chính là đoạn bạn yêu cầu chèn vào
                 for i, v in MerchantData.Brainrots do
                     if i >= 7 then -- Secret trở lên
                         task.spawn(function()

@@ -96,8 +96,8 @@ spawn(function()
 
     -- Cấu hình
     local CHECK_INTERVAL = 1     -- Kiểm tra countdown mỗi giây
-    local START_SPAM_TIME = 5    -- Khi còn <= 2 giây thì spam
-    local SPAM_DURATION = 10      -- Spam liên tục 5 giây
+    local START_SPAM_TIME = 10    -- Khi còn <= 2 giây thì spam
+    local SPAM_DURATION = 25      -- Spam liên tục 5 giây
     local MERCHANT_ID = "2298b248-44dd-4a34-bbfe-e1174e8ae1b4"
 
     -- 🕒 Hàm lấy số giây còn lại trong countdown

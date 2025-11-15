@@ -1,6 +1,6 @@
 spawn(function()
     while task.wait(1) do
-        setfpscap(8)
+        setfpscap(7)
     end
 end)
 spawn(function()
@@ -48,6 +48,7 @@ getgenv().Config = {
         ["Open Lucky Block"] = {
             "Admin Lucky Block",
             "Los Lucky Blocks",
+            "Spooky Lucky Block",
 
         },
         ["Buy Brainrot Dealer"] = 8,

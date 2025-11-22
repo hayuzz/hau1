@@ -44,6 +44,7 @@ getgenv().Config = {
             ["Zombie Tralala"] = { "All" },
             ["Perrito Burrito"] = { "All" },
             ["To to to Sahur"] = { "All" },
+            ["Guerriro Digitale"] = { "All" },
         },
         ["Open Lucky Block"] = {
             "Admin Lucky Block",

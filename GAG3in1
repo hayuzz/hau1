@@ -44,6 +44,8 @@ getgenv().Config = {
             ["Perrito Burrito"] = { "All" },
             ["To to to Sahur"] = { "All" },
             ["Guerriro Digitale"] = { "All" },
+            ["Coffin Tung Tung Tung Sahur"] = { "All" },
+            ["Nooo My Hotspot"] = { "All" },
         },
         ["Open Lucky Block"] = {
             "Admin Lucky Block",

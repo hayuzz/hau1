@@ -16,7 +16,7 @@ getgenv().Config = {
         ["Server Type"] = "Private (Clone)",
 
         -- Private Server config
-        ["Collect Cash Cap"] = "300B",
+        ["Collect Cash Cap"] = "1000B",
 
         -- Public Server config
         ["Max Auctioning Multiplier"] = 10,

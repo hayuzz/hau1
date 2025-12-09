@@ -10,13 +10,13 @@ spawn(function()
         Note = "Pc", } 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/skadidau/yummytrack/main/tracker"))()
 end)
-getgenv().Key = "k0d8111e7258c30f41e19014"
+getgenv().Key = "k7470b40a44cfd650216a40a"
 getgenv().Config = {
     ["Gameplay"] = {
         ["Server Type"] = "Private (Clone)",
 
         -- Private Server config
-        ["Collect Cash Cap"] = "100B",
+        ["Collect Cash Cap"] = "1000B",
 
         -- Public Server config
         ["Max Auctioning Multiplier"] = 10,
@@ -26,7 +26,6 @@ getgenv().Config = {
     ["Misc"] = {
         ["Kick if Ping above"] = 1750,
         ["Kick if FPS below"] = 1,
-
         ["Ignore Secret"] = {
             ["La Vacca Saturno Saturnita"] = { "All" },
             ["Karkerkar Kurkur"] = { "All" },
@@ -45,6 +44,10 @@ getgenv().Config = {
             ["Perrito Burrito"] = { "All" },
             ["To to to Sahur"] = { "All" },
             ["Guerriro Digitale"] = { "All" },
+            ["Coffin Tung Tung Tung Sahur"] = { "All" },
+            ["Nooo My Hotspot"] = { "All" },
+            ["La Grande Combinasion"] = { "All" },
+            ["LChicleteira Bicicleteira"] = { "All" },
         },
         ["Open Lucky Block"] = {
             "Admin Lucky Block",
@@ -55,6 +58,7 @@ getgenv().Config = {
         ["Buy Brainrot Dealer"] = 8,
         ["Buy Lucky Block"] = {
             "Secret Lucky Block",
+            "Festive Lucky Block",
             "Spooky Lucky Block",
             "Los Lucky Blocks",
         },
@@ -95,4 +99,44 @@ while task.wait(10) do
         task.wait(10)
     end
 end
+end)
+spawn(function()
+    local RS = game:GetService("ReplicatedStorage")
+    local claimRF = RS:WaitForChild("Packages"):WaitForChild("Net"):WaitForChild("RF/AdventService/ClaimReward")
+
+    local DELAY = 0.9
+
+    -- Claim Calendar (1 -> 25)
+    for i = 1, 25 do
+        local args = {"Calendar", i}
+
+        local success, result = pcall(function()
+            return claimRF:InvokeServer(unpack(args))
+        end)
+
+        if success then
+            print("Đã cố gắng claim Calendar phần " .. i .. ". Kết quả:", result)
+        else
+            warn("Lỗi khi claim Calendar phần " .. i .. ": ", result)
+        end
+
+        task.wait(DELAY)
+    end
+
+    -- Claim Login Streak (ví dụ có 3 mốc: 7 / 14 / 25 ngày)
+    for i = 1, 3 do
+        local args = {"Streak", i}
+
+        local success, result = pcall(function()
+            return claimRF:InvokeServer(unpack(args))
+        end)
+
+        if success then
+            print("Đã cố gắng claim Streak mốc " .. i .. ". Kết quả:", result)
+        else
+            warn("Lỗi khi claim Streak mốc " .. i .. ": ", result)
+        end
+
+        task.wait(DELAY)
+    end
 end)

@@ -136,6 +136,18 @@ while task.wait(10) do
     end
 end
 end)
+task.spawn(function()
+    local function doWork()
+      game:GetService("ReplicatedStorage").Packages.Net:FindFirstChild("RE/EventService/Festive Lucky Block/Spawn"):FireServer()
+    end
+
+    doWork() -- chạy ngay 1 lần khi bật script
+
+    while true do
+        task.wait(10800) -- chờ 3 giờ
+        doWork()         -- chạy lại 1 lần
+    end
+end)
 spawn(function()
     local RS = game:GetService("ReplicatedStorage")
     local claimRF = RS:WaitForChild("Packages"):WaitForChild("Net"):WaitForChild("RF/AdventService/ClaimReward")

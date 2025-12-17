@@ -25,7 +25,7 @@ getgenv().Config = {
 
 ["Misc"] = {
     ["Kick if Ping above"] = 1750,
-    ["Kick if FPS below"] = 10,
+    ["Kick if FPS below"] = 1,
 
     ["Ignore Secret"] = {
         ["La Vacca Saturno Saturnita"] = { "All" },

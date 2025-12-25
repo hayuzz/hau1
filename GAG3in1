@@ -138,45 +138,4 @@ while task.wait(10) do
     end
 end
 end)
-spawn(function()
-    local RS = game:GetService("ReplicatedStorage")
-    local claimRF = RS:WaitForChild("Packages"):WaitForChild("Net"):WaitForChild("RF/AdventService/ClaimReward")
-
-    local DELAY = 0.9
-
-    -- Claim Calendar (1 -> 25)
-    for i = 1, 25 do
-        local args = {"Calendar", i}
-
-        local success, result = pcall(function()
-            return claimRF:InvokeServer(unpack(args))
-        end)
-
-        if success then
-            print("Đã cố gắng claim Calendar phần " .. i .. ". Kết quả:", result)
-        else
-            warn("Lỗi khi claim Calendar phần " .. i .. ": ", result)
-        end
-
-        task.wait(DELAY)
-    end
-
-    -- Claim Login Streak (ví dụ có 3 mốc: 7 / 14 / 25 ngày)
-    for i = 1, 3 do
-        local args = {"Streak", i}
-
-        local success, result = pcall(function()
-            return claimRF:InvokeServer(unpack(args))
-        end)
-
-        if success then
-            print("Đã cố gắng claim Streak mốc " .. i .. ". Kết quả:", result)
-        else
-            warn("Lỗi khi claim Streak mốc " .. i .. ": ", result)
-        end
-
-        task.wait(DELAY)
-    end
-end)
-
 

@@ -84,6 +84,7 @@ getgenv().Config = {
             ["Please my Present"] = { "All" },
             ["Reindeer Tralala"] = { "All" },
             ["La Vacca Prese Presente"] = { "All" },
+            ["Ho Ho Ho Sahur"] = { "All" },
         },
     },
 

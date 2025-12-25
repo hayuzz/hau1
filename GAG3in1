@@ -79,6 +79,10 @@ getgenv().Config = {
             ["Trickolino"] = { "All" },
             ["Triplito Tralaleritos"] = { "All" },
             ["Zombie Tralala"] = { "All" },
+            ["Chimnino"] = { "All" },
+            ["Bunnyman"] = { "All" },
+            ["Please my Present"] = { "All" },
+            ["Reindeer Tralala"] = { "All" },
         },
     },
 
